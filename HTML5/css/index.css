@@ -1,0 +1,75 @@
+@import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.4/dist/web/static/pretendard-std.css");
+@import url("./normalize.css");
+@import url("./reset.css");
+
+/* 기본 스타일 */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* 본문 스타일 */
+body {
+  font-family: "Pretendard Std", Pretendard, -apple-system, BlinkMacSystemFont,
+    system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple Color Emoji",
+    "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
+  font-weight: 400;
+  background: #fff;
+  color: #181818;
+}
+
+/* 레이아웃 */
+.header,
+.visual,
+.main,
+.slogan,
+.footer-inner {
+  width: 940px;
+  margin: 0px auto;
+}
+/* 헤더 */
+.header {
+  background: yellow;
+  height: 10vh;
+}
+/* 비주얼 */
+.visual {
+  background: pink;
+  height: 10vh;
+}
+/* 메인 콘텐츠 */
+.main {
+  height: 40vh;
+  background: blue;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-around;
+  padding: 30px 15px;
+}
+/* 그룹 */
+.group {
+  background: skyblue;
+}
+.group1 {
+  width: 250px;
+}
+.group2 {
+  width: 380px;
+}
+.group3 {
+  width: 190px;
+}
+/* 슬로건 */
+.slogan {
+  background: lime;
+  height: 10vh;
+}
+/* 푸터 */
+.footer {
+  background: purple;
+}
+.footer-inner {
+  background: coral;
+  height: 10vh;
+}
