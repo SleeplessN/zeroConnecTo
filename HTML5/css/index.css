@@ -351,28 +351,53 @@ body {
 }
 /* 웹 관련 용어 */
 .term {
-  width: 250px;
-  height: 138px;
   margin-top: 20px;
   background: #aaa linear-gradient(to bottom, #ccc, #aaa);
-  display: flow-root;
+  border: 1px solid #000;
+  border-radius: 5px;
+  padding: 15px;
 }
 .term-title {
-  padding: 15px 15px 10px 15px;
+  font-weight: 700;
+  font-size: 1.5rem;
+}
+.term-list {
+  margin-top: 15px;
 }
 .term-list div {
-  padding: 0px 15px 15px 15px;
+  display: flow-root;
+  margin-top: 10px;
 }
 .term-list-subject {
-  background: red;
-  float: right;
+  width: 145px;
+  color: #296897;
+}
+.term-list-thumbnail {
+  position: relative;
+  top: 2px;
 }
 .term-list-thumbnail img {
-  float: left;
+  vertical-align: top;
 }
 .term-list-brief {
-  background: blue;
-  /* float : ; */
+  float: right;
+  width: 145px;
+  margin-top: 5px;
+  line-height: 1.5;
+}
+.odd .term-list-subject,
+.odd .term-list-brief {
+  float: right;
+}
+.odd .term-list-thumbnail {
+  float: left;
+}
+.even .term-list-subject,
+.even .term-list-brief {
+  float: left;
+}
+.even .term-list-thumbnail {
+  float: right;
 }
 /* 슬로건 */
 .slogan {
