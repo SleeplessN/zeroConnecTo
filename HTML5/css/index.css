@@ -349,6 +349,23 @@ body {
   color: #f00;
   background-size: 14px 14px, 100%;
 }
+/* 웹 관련 용어 */
+.term {
+  border: 1px solid #000;
+  border-radius: 5px;
+  background: #aaa linear-gradient(to bottom, #ccc, #aaa);
+  margin-top: 20px;
+}
+
+.term h2 {
+  margin: 16px 16px 10px 16px;
+  font-weight: 800;
+}
+
+.term img {
+  float: left;
+  margin-left: 16px;
+}
 /* 슬로건 */
 .slogan {
   background: lime;
