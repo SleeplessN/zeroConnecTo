@@ -106,12 +106,10 @@ body {
 }
 
 .visual {
-  background: pink;
   height: 120px;
   position: relative;
 }
 .visual-text {
-  background-color: lime;
   animation-name: moveEffect;
   animation-duration: 2000ms;
   animation-fill-mode: forwards;
@@ -230,8 +228,10 @@ body {
 /* 메인 콘텐츠 */
 .main {
   display: flow-root;
-  background: blue;
+  background: #fff;
   padding: 30px 15px;
+  border-radius: 15px 15px 0 0;
+  min-height: 400px;
   /* overflow: hidden; */
 }
 /* .main::after {
@@ -242,7 +242,7 @@ body {
 /* 그룹 */
 .group {
   float: left;
-  background: skyblue;
+
   margin: 0 15px;
 }
 .group1 {
@@ -253,6 +253,35 @@ body {
 }
 .group3 {
   width: 190px;
+}
+/* 로그인 */
+.login {
+  background: orangered;
+}
+.login h2 {
+  padding: 10px;
+  color: #fff;
+  font-weight: bold;
+}
+.login fieldset {
+  padding: 10px;
+}
+.user-email {
+  display: inline-block;
+}
+.user-email label {
+  margin-right: 12px;
+}
+.user-pwd {
+  display: inline-block;
+}
+.user-email input {
+  width: 120px;
+}
+.user-pwd input {
+  width: 120px;
+}
+fieldset button {
 }
 /* 슬로건 */
 .slogan {
