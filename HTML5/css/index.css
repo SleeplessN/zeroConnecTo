@@ -351,20 +351,28 @@ body {
 }
 /* 웹 관련 용어 */
 .term {
-  border: 1px solid #000;
-  border-radius: 5px;
-  background: #aaa linear-gradient(to bottom, #ccc, #aaa);
+  width: 250px;
+  height: 138px;
   margin-top: 20px;
+  background: #aaa linear-gradient(to bottom, #ccc, #aaa);
+  display: flow-root;
 }
-
-.term h2 {
-  margin: 16px 16px 10px 16px;
-  font-weight: 800;
+.term-title {
+  padding: 15px 15px 10px 15px;
 }
-
-.term img {
+.term-list div {
+  padding: 0px 15px 15px 15px;
+}
+.term-list-subject {
+  background: red;
+  float: right;
+}
+.term-list-thumbnail img {
   float: left;
-  margin-left: 16px;
+}
+.term-list-brief {
+  background: blue;
+  /* float : ; */
 }
 /* 슬로건 */
 .slogan {
