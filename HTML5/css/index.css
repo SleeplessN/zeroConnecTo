@@ -5,7 +5,8 @@
 @import url("./fontello.css");
 
 /* 숨김 콘텐츠 */
-.sr-only {
+.sr-only,
+legend {
   background: red;
   position: absolute;
   width: 1px;

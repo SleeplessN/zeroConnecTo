@@ -143,32 +143,42 @@
     <main class="main">
       <div class="group group1">
         <section class="login">
-          <h2>로그인</h2>
-          <form action="">
-            <div class="userID">
-              <label for="userID">아이디</label
-              ><input
-                type="text"
-                name="userID"
-                id="userID"
-                required="required"
-              />
-            </div>
-            <div class="userPW">
-              <label for="userID">비밀번호</label
-              ><input
-                type="password"
-                name="userPW"
-                id="userPW"
-                required="required"
-              />
-            </div>
-          </form>
-          <button type="submit">로그인</button>
-          <div class="more">
-            <a href="/">회원가입</a>
-            <a href="/">아이디/비밀번호 찾기</a>
-          </div>
+          <h2 class="login-title">
+            <form
+              method="POST"
+              action="https://formspree.io/seulbinim@gmail.com"
+              class="login-form"
+            >
+              <fieldset>
+                <legend>회원 로그인 폼</legend>
+                <div class="user-email">
+                  <label for="userEmail">아이디</label>
+                  <input
+                    type="email"
+                    id="userEmail"
+                    required="required"
+                    placeholder="guest@zerobase.com"
+                  />
+                </div>
+                <div class="user-pwd">
+                  <label for="userPwd">비밀번호</label>
+                  <input
+                    type="password"
+                    id="userPwd"
+                    required="required"
+                    placeholder="8자리 이상"
+                  />
+                </div>
+                <button type="submit" class="login-button">로그인</button>
+              </fieldset>
+            </form>
+            <ul class="sign">
+              <li><a href="/" class="icon-right-open">회원가입</a></li>
+              <li>
+                <a href="/" class="icon-right-open">아이디/비밀번호 찾기</a>
+              </li>
+            </ul>
+          </h2>
         </section>
       </div>
       <div class="group group2">그룹2</div>
