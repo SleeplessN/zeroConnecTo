@@ -256,32 +256,77 @@ body {
 }
 /* 로그인 */
 .login {
-  background: orangered;
-}
-.login h2 {
+  background: #e8852e radial-gradient(circle at right top, #e8852e, #ed552f);
+  border-radius: 5px;
   padding: 10px;
-  color: #fff;
-  font-weight: bold;
+  box-shadow: 5px 5px 0 0 #aaa;
 }
-.login fieldset {
-  padding: 10px;
+.login-title {
+  color: #ff0;
+  font-size: 1.5rem;
+  font-weight: 600;
+  text-indent: 10px;
+}
+.login-form {
+  margin-top: 10px;
+  background: #fff;
+  padding: 10px 10px 0 10px;
+  border-radius: 5px 5px 0 0;
+}
+.login-form fieldset {
+  position: relative;
+  border-bottom: 1px solid #aaa;
+  padding-bottom: 10px;
 }
 .user-email {
-  display: inline-block;
-}
-.user-email label {
-  margin-right: 12px;
+  margin-bottom: 5px;
 }
 .user-pwd {
+}
+.login-form label {
+  width: 56px;
   display: inline-block;
 }
-.user-email input {
-  width: 120px;
+.login-form input {
+  width: 90px;
+  height: 24px;
+  border: 1px solid #aaa;
+  border-radius: 4px;
+  padding: 2px 2px 2px 0.5em;
 }
-.user-pwd input {
-  width: 120px;
+.login-button {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 50px;
+  height: 53px;
+  padding: 0;
+  font-size: 1.3rem;
+  color: #fff;
+  background: #ed552f;
+  border: 0;
+  border-radius: 4px;
 }
-fieldset button {
+.sign {
+  background: #fff;
+  padding: 4px 10px;
+  border-radius: 0 0 5px 5px;
+  display: flow-root;
+}
+.sign li:first-child {
+  float: left;
+}
+.sign li:last-child {
+  float: right;
+}
+.sign a {
+  display: block;
+  padding: 6px 0;
+  font-size: 1.3rem;
+  /* letter-spacing: -1px; */
+}
+.sign .icon-right-open::before {
+  color: #ed552f;
 }
 /* 슬로건 */
 .slogan {
