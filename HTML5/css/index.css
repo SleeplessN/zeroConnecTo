@@ -438,30 +438,33 @@ body {
 /* 공지사항 및 자료실 */
 .board {
   margin-top: 20px;
-  background: yellow;
   position: relative;
-  height: 214px;
+  padding-top: 45px;
+  min-height: 214px;
 }
 .board-tab {
-  float: left;
+  position: absolute;
+  top: 0;
   border: 1px solid #aaa;
   border-radius: 5px 5px 0 0;
   background: #ccc;
-  padding: 7px 10px;
+  padding: 10px 15px;
   color: #666;
 }
+.notice-tab {
+  left: 0;
+}
+.archive-tab {
+  left: 80px;
+}
 .board-section.is-select .board-tab {
+  z-index: 10;
   background: #fff;
   color: #ed552f;
   border-color: currentColor currentColor #fff currentColor;
 }
 .board-panel {
-  position: absolute;
-  background: pink;
   display: none;
-  top: 45px;
-  left: 0;
-  width: 100%;
 }
 .board-section.is-select .board-panel {
   display: flex;
@@ -472,7 +475,6 @@ body {
   display: flex;
   flex-flow: row nowrap;
   width: 100%;
-  /* justify-content: space-between; */
 }
 .board-panel a {
   flex-grow: 1;
@@ -482,7 +484,6 @@ body {
   padding: 4px 0;
 }
 .board-more {
-  background: lime;
   display: none;
   position: absolute;
   top: -8px;
