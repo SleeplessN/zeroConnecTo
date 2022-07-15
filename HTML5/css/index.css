@@ -418,6 +418,7 @@ body {
 }
 
 .search-form input {
+  -webkit-appearance: none;
   border: 1px solid #aaa;
   height: 24px;
   border-radius: 4px 4px 0 0;
