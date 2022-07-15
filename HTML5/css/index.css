@@ -425,6 +425,7 @@ body {
   padding: 2px 2px 2px 0.5rem;
   width: 100%;
   margin: 0 10px;
+  background: #fff;
 }
 .search-button {
   background: #000;
