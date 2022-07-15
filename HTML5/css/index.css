@@ -439,30 +439,63 @@ body {
 .board {
   margin-top: 20px;
   background: yellow;
-  display: relative;
+  position: relative;
+  height: 214px;
 }
-.board-section button {
-  display: inline;
+.board-tab {
+  float: left;
+  border: 1px solid #aaa;
+  border-radius: 5px 5px 0 0;
+  background: #ccc;
+  padding: 7px 10px;
+  color: #666;
 }
-.board-section .board-panel,
-.board-section .board-more {
+.board-section.is-select .board-tab {
+  background: #fff;
+  color: #ed552f;
+  border-color: currentColor currentColor #fff currentColor;
+}
+.board-panel {
+  position: absolute;
+  background: pink;
   display: none;
+  top: 45px;
+  left: 0;
+  width: 100%;
 }
-.board-section.is-select .board-panel,
-.board-section.is-select .board-more {
-  display: block;
+.board-section.is-select .board-panel {
+  display: flex;
+  flex-flow: row wrap;
+  gap: 10px;
+}
+.board-panel li {
+  display: flex;
+  flex-flow: row nowrap;
+  width: 100%;
+  /* justify-content: space-between; */
 }
 .board-panel a {
-  display: inline-block;
-  width: 80%;
-}
-.board-panel time {
-  width: 20%;
+  flex-grow: 1;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  padding: 4px 0;
 }
 .board-more {
+  background: lime;
+  display: none;
   position: absolute;
-  top: 0;
-  right: 0;
+  top: -8px;
+  right: -8px;
+  padding: 8px;
+}
+
+.board-more::before {
+  color: hsla(110, 50%, 30%, 1);
+}
+
+.board-section.is-select .board-more {
+  display: block;
 }
 
 /* 슬로건 */
