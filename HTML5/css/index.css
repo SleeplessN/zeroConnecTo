@@ -435,6 +435,36 @@ body {
   border: 0;
   border-radius: 4px;
 }
+/* 공지사항 및 자료실 */
+.board {
+  margin-top: 20px;
+  background: yellow;
+  display: relative;
+}
+.board-section button {
+  display: inline;
+}
+.board-section .board-panel,
+.board-section .board-more {
+  display: none;
+}
+.board-section.is-select .board-panel,
+.board-section.is-select .board-more {
+  display: block;
+}
+.board-panel a {
+  display: inline-block;
+  width: 80%;
+}
+.board-panel time {
+  width: 20%;
+}
+.board-more {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
 /* 슬로건 */
 .slogan {
   background: lime;
