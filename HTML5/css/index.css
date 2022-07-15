@@ -399,6 +399,28 @@ body {
 .even .term-list-thumbnail {
   float: right;
 }
+/* 검색 폼 */
+.search-form {
+  background: yellow;
+}
+.search-form fieldset {
+  background: #aaa linear-gradient(to bottom, #ccc, #aaa);
+  border: 1px solid #181818;
+  border-bottom: none;
+  border-radius: 15px 15px 0 0;
+}
+.search {
+  padding: 20px 20px;
+  display: flex;
+  justify-content: space-evenly;
+}
+.search button {
+  background: #000;
+  color: #fff;
+}
+.icon-search::before {
+  content: "\e802";
+}
 /* 슬로건 */
 .slogan {
   background: lime;
