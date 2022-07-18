@@ -499,6 +499,40 @@ body {
   display: block;
 }
 
+/* 새소식 */
+.news {
+  background: yellow;
+  position: relative;
+  margin-top: 20px;
+}
+.news-item {
+  display: flex;
+  padding-top: 40px;
+}
+.news h2 {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.news-item h3,
+.news-item time,
+.news-item p {
+  order: 2;
+}
+.news-item::before {
+  content: "";
+  display: block;
+  height: 2px;
+  background: black;
+}
+.news-item figure {
+  order: 1;
+}
+.news-more {
+  position: absolute;
+  right: 0;
+  top: 0;
+}
 /* 슬로건 */
 .slogan {
   background: lime;
