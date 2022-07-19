@@ -555,6 +555,7 @@ body {
   right: -8px;
 }
 /* 신규이벤트 및 관련사이트 */
+/* 신규이벤트 */
 .gradient-effect {
   border: 1px solid #aaa;
   border-radius: 5px;
@@ -631,7 +632,32 @@ body {
   border: 1px solid #aaa;
   box-shadow: 5px 5px 0 0 #bbb;
 }
-
+/* 관련 사이트 */
+.related-title {
+  font-size: 1.5rem;
+  font-weight: 800;
+}
+.related-list {
+  background: #fff;
+  height: 25px;
+  overflow: hidden;
+  text-indent: 20px;
+  border: 1px solid #aaa;
+  border-radius: 5px;
+}
+.related-list li {
+  padding: 4px;
+}
+.related-list:hover,
+.related-list:focus {
+  padding: 5px 0;
+  height: 145px;
+  background: #fff;
+  border: 1px solid #aaa;
+  border-radius: 5px;
+  text-indent: 20px;
+  transition: 0.1s;
+}
 /* 슬로건 */
 .slogan {
   background: lime;
