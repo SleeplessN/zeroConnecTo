@@ -571,9 +571,10 @@ body {
   align-items: flex-start;
   border-bottom: 1px solid #aaa;
 }
-.event-title {
+.event-title,
+.related-title {
   font-size: 1.5rem;
-  font-weight: 800;
+  font-weight: 700;
 }
 /* .event-button-wrapper {
   margin-left: auto;
@@ -633,31 +634,32 @@ body {
   box-shadow: 5px 5px 0 0 #bbb;
 }
 /* 관련 사이트 */
-.related-title {
-  font-size: 1.5rem;
-  font-weight: 800;
+.related {
+  padding-top: 10px;
 }
+
 .related-list {
+  margin-top: 10px;
   background: #fff;
-  height: 25px;
-  overflow: hidden;
-  text-indent: 20px;
   border: 1px solid #aaa;
   border-radius: 5px;
+  height: 27px;
+  overflow: hidden;
+  transition: height 400ms, padding 400ms 400ms;
 }
-.related-list li {
-  padding: 4px;
-}
+
 .related-list:hover,
 .related-list:focus {
-  padding: 5px 0;
-  height: 145px;
-  background: #fff;
-  border: 1px solid #aaa;
-  border-radius: 5px;
-  text-indent: 20px;
-  transition: 0.1s;
+  height: 147px;
+  padding: 10px 0;
 }
+
+.related-list a {
+  display: block;
+  line-height: 25px;
+  padding: 0 0 0 20px;
+}
+
 /* 슬로건 */
 .slogan {
   background: lime;
