@@ -37,7 +37,8 @@ body {
     system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple Color Emoji",
     "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
   font-weight: 400;
-  background: #ccc;
+  background: url(./images/bg_flower.png) no-repeat 50% 0,
+    #ccc linear-gradient(to bottom, #ccc 0%, #eee 35%, #fff 60%, #fff 100%);
   color: #181818;
   font-size: 1.4rem;
 }
@@ -736,37 +737,47 @@ body {
 }
 /* 슬로건 */
 .slogan {
-  background: lime;
   position: relative;
-  display: flex;
-  align-items: center;
+  padding: 10px 100px 10px 180px;
 }
 
 .slogan-title {
   position: absolute;
-  line-height: 80px;
-  background: yellow;
+  left: 35px;
+  bottom: -25px;
   width: 110px;
   height: 83px;
   text-align: center;
-  margin: auto;
+  line-height: 83px;
 }
-.slogan-title::before {
-  content: url(./images/coffee.png);
+.slogan-title::after {
+  content: "";
   position: absolute;
-  top: 10px;
+  width: 100%;
+  height: 100%;
+  top: 0;
   left: 0;
+  background: url(./images/coffee.png) no-repeat 0 0;
 }
 .slogan-content {
-  font-size: 1.7rem;
-  color: brown;
-  line-height: ;
-  height: 83px;
+  color: #a09784;
+  line-height: 1.5;
 }
+.slogan-content q::before {
+  display: inline-block;
+  font-size: 2.5rem;
+  transform: translateY(5px);
+}
+.slogan-content q::after {
+  content: "";
+}
+
 /* 푸터 */
 .footer {
-  background: purple;
+  background: #ccc
+    linear-gradient(to bottom, #ccc 0%, #eee 35%, #fff 60%, #fff 100%);
 }
 .footer-inner {
   background: coral;
+  height: 150px;
 }
