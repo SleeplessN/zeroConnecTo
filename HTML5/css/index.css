@@ -41,6 +41,19 @@ body {
   color: #181818;
   font-size: 1.4rem;
 }
+/* 스킵 내비게이션 */
+
+.skip-nav a {
+  display: none;
+  flex-flow: row nowrap;
+  background: #000;
+  color: #fff;
+  justify-content: center;
+  padding: 8px;
+}
+.skip-nav a:focus {
+  display: flex;
+}
 
 /* 레이아웃 */
 .header,
@@ -663,44 +676,51 @@ body {
 /* 인기 사이트 */
 .favorite {
   position: relative;
+  margin-top: 20px;
 }
 .favorite-list {
   margin-top: 10px;
-  background: yellow;
+
   list-style-type: none;
   position: relative;
 }
 .favorite-list li {
-  background: pink;
   margin-top: 8px;
+  counter-increment: number;
+  position: relative;
+}
+.favorite-list li::before {
+  content: counter(number);
+  display: inline-flex;
+  padding: 2px 5px 1px;
+  font-size: 1.1rem;
+  color: #fff;
+  background: #aaa;
+  border-radius: 4px;
+  min-width: 1.5em;
+  justify-content: center;
+  margin-right: 0.5em;
 }
 .favorite-list a {
-  counter-reset: numbering;
-  counter-increment: numbering;
+  vertical-align: middle;
 }
-.favorite-list a::before {
-  content: counter(numbering);
-  width: 15px;
-  height: 15px;
-  background: #ccc;
-  display: inline-block;
-  margin-right: 3px;
-  text-align: center;
-  border: 0;
-  border-radius: 3px;
-  color: #fff;
-}
-.up {
-  background-image: url(./images/rank.png);
-  background-position: 0 0;
-  width: 20px;
-  height: 20px;
-}
-.down {
+.favorite-list em {
   position: absolute;
-  display: inline-block;
+  width: 9px;
+  height: 11px;
   right: 0;
+  top: 50%;
+  margin-top: -5px;
+  background: url(./images/rank.png);
+  background-repeat: no-repeat;
 }
+.favorite-list .stop {
+  background-position: 0 50%;
+}
+.favorite-list .down {
+  background-position: 0 100%;
+}
+
 .favorite-more {
   position: absolute;
   top: 2px;
