@@ -6,9 +6,8 @@
     <link rel="stylesheet" href="./css/index.css" />
   </head>
   <body>
-    <div class="skip-nav">
-      <a href="#userEmail">본문 바로가기</a>
-    </div>
+    <!-- <a href="#userEmail" class="skip-nav"><span>본문 바로가기</span></a> -->
+
     <header class="header">
       <h1 class="logo">
         <a href="/"><img src="./assets/logo.png" alt="웹 카페 로고" /></a>
@@ -518,7 +517,17 @@
         </section>
       </div>
     </main>
-    <article class="slogan">슬로건</article>
+    <article class="slogan">
+      <h2 class="slogan-title" title="웹카페에서 웹표준을">슬로건</h2>
+      <p class="slogan-content">
+        <q cite="http://w3.org/WAI"
+          >The power of the Web is in its universality, Access by everyone
+          regardless of disability is an essential aspect.</q
+        >
+        Tim Berners - Lee , W3C Director and inventor of the World Wide Web
+      </p>
+      <footer class="sr-only">출처 : W3C, http://w3.org/WAI/</footer>
+    </article>
     <footer class="footer">
       <div class="footer-inner">푸터</div>
     </footer>
