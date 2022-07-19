@@ -572,7 +572,8 @@ body {
   border-bottom: 1px solid #aaa;
 }
 .event-title,
-.related-title {
+.related-title,
+.favorite-title {
   font-size: 1.5rem;
   font-weight: 700;
 }
@@ -659,7 +660,53 @@ body {
   line-height: 25px;
   padding: 0 0 0 20px;
 }
-
+/* 인기 사이트 */
+.favorite {
+  position: relative;
+}
+.favorite-list {
+  margin-top: 10px;
+  background: yellow;
+  list-style-type: none;
+  position: relative;
+}
+.favorite-list li {
+  background: pink;
+  margin-top: 8px;
+}
+.favorite-list a {
+  counter-reset: numbering;
+  counter-increment: numbering;
+}
+.favorite-list a::before {
+  content: counter(numbering);
+  width: 15px;
+  height: 15px;
+  background: #ccc;
+  display: inline-block;
+  margin-right: 3px;
+  text-align: center;
+  border: 0;
+  border-radius: 3px;
+  color: #fff;
+}
+.up {
+  background-image: url(./images/rank.png);
+  background-position: 0 0;
+  width: 20px;
+  height: 20px;
+}
+.down {
+  position: absolute;
+  display: inline-block;
+  right: 0;
+}
+.favorite-more {
+  position: absolute;
+  top: 2px;
+  right: 2px;
+  padding: 8px;
+}
 /* 슬로건 */
 .slogan {
   background: lime;
