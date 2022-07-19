@@ -554,61 +554,82 @@ body {
   top: -8px;
   right: -8px;
 }
+/* 신규이벤트 및 관련사이트 */
 .gradient-effect {
-  background: #aaa linear-gradient(to bottom, #ccc, #eee);
   border: 1px solid #aaa;
   border-radius: 5px;
-}
-.event {
-  position: relative;
-}
-.event .event-title {
-  font-weight: 800;
   padding: 10px;
+  background: #ccc linear-gradient(to bottom, #ccc, #eee);
 }
 .accent-color {
-  color: #ed552f;
+  color: #d16527;
 }
-.event-button-prev {
-  position: absolute;
-  right: 35px;
-  top: 10px;
-  text-indent: -9999px;
-  width: 18px;
+.event {
+  display: flex;
+  flex-flow: row wrap;
+  align-items: flex-start;
+  border-bottom: 1px solid #aaa;
+}
+.event-title {
+  font-size: 1.5rem;
+  font-weight: 800;
+}
+/* .event-button-wrapper {
+  margin-left: auto;
   height: 18px;
+  overflow: hidden;
+  display: flex;
+  gap: 6px;
+}
+.event button {
+  width: 19px;
+  height: 0 !important;
   border: 0;
-  background: url(./images/back_forward.png) left;
+  padding: 0;
+  padding: 20px 0 0 0;
+  background-color: transparent;
+  background-image: url(./images/back_forward.png);
+  background-repeat: no-repeat;
+}
+.event button:focus {
+  outline-offset: -2px;
 }
 .event-button-next {
-  position: absolute;
-  right: 10px;
-  top: 10px;
-  text-indent: -9999px;
-  width: 18px;
+  background-position: -36px 0;
+} */
+.event-button-container {
+  padding: 4px;
+  margin-left: auto;
+  display: flex;
+  flex-flow: row nowrap;
+  gap: 6px;
+  transform: translate(4px, -4px);
+}
+.event-button-container button {
+  width: 19px;
   height: 18px;
   border: 0;
-  background: url(./images/back_forward.png) right;
+  background-color: transparent;
+  background-image: url(./images/back_forward.png);
+  background-repeat: no-repeat;
+}
+.event-button-container .event-button-next {
+  background-position: -36px 0;
 }
 
-#eventDetail {
-  padding: 10px;
+.event-detail {
+  width: 100%;
 }
 .event-thumbnail {
-  margin-bottom: 5px;
-}
-.event-thumbnail img {
-  box-shadow: 5px 5px #bbb;
+  margin: 2px 0 10px;
 }
 .event-brief {
-  text-align: center;
+  margin: 10px 0;
 }
-#eventDetail::after {
-  content: "";
-  display: block;
-  width: 100%;
-  height: 1px;
-  background: #bbb;
-  margin-top: 10px;
+
+.event-thumbnail img {
+  border: 1px solid #aaa;
+  box-shadow: 5px 5px 0 0 #bbb;
 }
 
 /* 슬로건 */
