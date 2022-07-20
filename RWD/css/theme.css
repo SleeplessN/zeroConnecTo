@@ -1,0 +1,23 @@
+:root{
+  --white: #fff;
+  --black: #000;
+  --silver: #767676;
+  --primary-color: #38302e;
+  --secondary-color: #988574;
+  --accent-color: #ffc;
+  --accent-opacity-color: hsla(60, 50%, 50%, 0.85);
+
+  --green: #abd375;
+  --yellow: #e8ca58;
+  --orange: #eea60a;
+  --brown: #988574;
+  --blue: #6aaee6;
+
+  --accent-book: var(--green);
+  --accent-news: var(--yellow);
+  --accent-board: var(--brown);
+  --accent-favorite: var(--orange);
+  --accent-twitter: var(--blue);
+}
+
+

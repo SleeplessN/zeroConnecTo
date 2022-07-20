@@ -1,0 +1,487 @@
+@import url(./normalize.css);
+@import url(./a11y.css);
+@import url(./theme.css);
+@import url(./base.css);
+
+
+/* 모든 디바이스 (All Device) */
+/* 아이콘 폰트 */
+.far{
+  margin-right: 0.5rem;
+}
+
+/* 헤더 */
+.appHeader{
+  background: var(--primary-color);
+  display: flex;
+  flex-flow: row wrap;
+  position: relative;
+  padding: 1rem 1.5rem 1rem;
+}
+
+.logo, .memberOnly, .searchForm{
+  width: 100%;
+}
+
+/* 로고 */
+.logo__link{
+  display:block;
+  width:12.75rem;
+  height:3.6875rem;
+  background-image:url(../images/webcafe-logo.png);
+  background-repeat:no-repeat
+}
+
+/* 멤버 링크 */
+.memberOnly{
+  order: -1;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: flex-end;
+  color: var(--white);
+  font-size: 0.825rem;
+}
+
+/* 검색폼 */
+.searchForm{
+  margin-top: 0.75rem;
+}
+
+.searchForm__group{
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: flex-end;
+}
+
+.searchForm .formInput{
+  flex-grow: 1;
+}
+
+.searchForm .formInput__input{
+  width: 100%;
+  appearance:none;
+  padding: 0.5rem;
+  border-radius: 0.25rem;
+  border:1px solid var(--silver);
+  background: var(--white);
+  font-size: 0.875rem;
+}
+
+.searchForm .button{
+  appearance:none;
+  pointer-events:none;
+  border:0;
+  background: var(--secondary-color);
+  color: var(--white);
+  padding:.5rem 1rem;
+  font-size:.875rem;
+  border-radius:.25rem;
+  margin-left: 1rem;
+  white-space: nowrap;
+}
+
+
+/* 메인 메뉴 제어버튼 */
+.buttonNone{
+  appearance:none;
+  border:0;
+  padding:0;
+  background:none;
+}
+
+.button--burger{
+  width:2rem;
+  height:2rem;
+  overflow:hidden;
+  transform:translate(0, 0);
+  position: absolute;
+  top: 3rem;
+  right: 1.5rem;
+}
+.button--burgerBarTop,.button--burgerBarMiddle,.button--burgerBarBottom{
+  background:#fff;
+  position:absolute;
+  left:0;
+  width:100%;
+  height:20%;
+  border-radius:.25rem
+}
+.button--burgerBarTop{
+  top: 0;
+}
+.button--burgerBarMiddle{
+  top: 50%;
+  transform:translateY(-50%)
+}
+.button--burgerBarBottom{
+  top: 100%;
+  transform: translateY(-100%)
+}
+
+/* 섹션 공통 */
+.appMain [class*="__title"]{
+  display: flex;
+  flex-flow: column nowrap;
+  min-height: 3.75rem;
+  font-size: 1.25rem;
+  font-weight: 500;
+  padding-left: 4rem;
+  justify-content: center;
+  margin-bottom: 1rem;
+}
+
+.appMain [class*="__summary"]{
+  line-height: 1.6;
+  margin-top: 1rem;
+}
+
+.sprite{
+  background-image: url(./../images/sprite_main.png);
+  background-repeat: no-repeat;
+}
+
+.spriteBook{
+  background-position:0 0
+}
+.spriteBoard{
+  background-position:0 -115px
+}
+.spriteNews{
+  background-position:0 -230px
+}
+.spriteFavorite{
+  background-position:0 -345px
+}
+.spriteTwitter{
+  background-position:0 -460px
+}
+
+.themeGreen{
+  color: var(--accent-book);
+}
+.themeYellow{
+  color: var(--accent-news);
+}
+.themeBrown{
+  color: var(--accent-board);
+}
+.themeOrange{
+  color: var(--accent-favorite);
+}
+.themeBlue{
+  color: var(--accent-twitter);
+}
+
+/* 추천 서적 */
+.book__cover{
+  width: 50%;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.book__coverCaption{
+  margin-top: 0.5rem;
+}
+
+.book__info{
+  margin-top: 1rem;
+  text-align: center;
+}
+
+.book__info *{
+  display: inline-block;
+}
+
+.book__info .ratingStar{
+  width: 100%;
+  font-size: 1.8rem;
+}
+
+/* 새소식 */
+.iframeWrapper{
+  padding-top: 56.25%;
+  position: relative;
+  /* background: url(./../images/hero.jpg) no-repeat 50% / contain; */
+}
+
+iframe{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.news__date{
+  display: block;
+  text-align: right;
+  margin-top: 0.5rem;
+}
+
+/* 게시판 */
+.board{
+  position: relative;
+}
+
+.board__list{
+  display: flex;
+  flex-flow: column nowrap;
+  gap: 0.5rem;
+}
+
+.board__item{
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+}
+
+.board__link{
+  flex-grow: 1;
+  margin-right: 0.5rem;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.board__date{
+  white-space: nowrap;
+}
+
+.board__more{
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+/* 인기 사이트 */
+.favorite__list{
+  display: flex;
+  flex-flow: column nowrap;
+  gap: 1rem;
+}
+/* 트위터 */
+.twitter__container{
+  display: flow-root;
+}
+
+.twitter__userInfo{
+  display: inline-flex;
+  gap: 0.5rem;
+  float: left;
+  width: 80%;
+  margin-bottom: 1rem;
+}
+
+.twitter__userProfile{
+  float: right;
+  width: 20%;
+  shape-outside: circle(50%);
+  border: 1px solid var(--silver);
+  border-radius: 50%;
+  overflow: hidden;
+  /* width: 100px;
+  height: 100px; */
+}
+
+.twitter__userProfile img{
+  /* width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: 20% 30%; */
+  vertical-align: top;
+}
+
+.twitter__summary{
+  margin-right: 22%;
+  background: ;
+}
+
+.twitter__date{
+  display:block;
+  margin-top: .5rem;
+}
+
+/* 푸터 */
+.appFooter{
+  background: var(--primary-color);
+  color: var(--white);
+  padding: 2rem 1.5rem;
+}
+
+.address{
+  margin-bottom: 1rem;
+}
+
+/* 모바일 (Small Screen) */
+@media screen and (min-width: 320px) and (max-width: 767px) {
+  /* 모바일 메인 메뉴 제어 버튼 */
+  .button--burger span{
+    transition: all 200ms;
+  }
+
+  .button--burger.is-active .button--burgerBarTop{
+    top:50%;
+    transform:translateY(-50%) rotate(45deg)
+  }
+  .button--burger.is-active .button--burgerBarMiddle{
+      transform:translate(-110%, -50%)
+  }
+  .button--burger.is-active .button--burgerBarBottom{
+      top:50%;
+      transform:translateY(-50%) rotate(-45deg)
+  }
+  
+  /* 모바일 내비게이션 */
+  .menu{
+    background: var(--accent-opacity-color);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 70%;
+    transform: translateX(-150%);
+    height: 100vh;
+    backdrop-filter: blur(5px);
+  }
+
+  .menu__list{
+    padding: 1.5rem;
+  }
+
+  .menu__item{
+    margin: .75rem 0;
+  }
+
+  .menu__link{
+    display: block;
+    padding: 0.5rem 0;
+  }
+
+  /* 모바일 메인 콘텐츠 섹션 */
+  .appMain{
+    padding: 0 1.5rem;
+  }
+
+  .appMain > section, .appMain article{
+    margin-top: 1.5rem;
+  }
+
+  /* 모바일 인기사이트 */
+  .favorite__link::after{
+    content: attr(data-tooltip);
+    margin-left: 1rem;
+    color: var(--accent-favorite);
+  }
+
+  .address{
+    display: flex;
+    flex-flow: column nowrap; 
+  }
+}
+
+/* 데스크탑 (Large Screen) */
+@media screen and (min-width: 768px) {
+  /* 헤더 */
+  .appHeader{
+    display: block;
+    position: relative;
+    padding-left: 400px;
+    background: var(--white);
+    max-width: 1024px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  /* 로고 */
+  .logo{
+    position: absolute;
+    left: 1.5rem;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+  /* 멤버 링크 */
+  .memberOnly{
+    color: var(--black);
+  }
+
+  /* 검색 폼 */
+  .searchForm .formInput{
+    flex-grow: 0;
+  }
+
+  .searchForm .formInput__input{
+    width: 350px;
+  }
+
+  /* 메인 메뉴 제어 버튼 */
+  .button--burger{
+    display: none;
+  }
+
+  /* 내비게이션 */
+  .menu{
+    background: var(--secondary-color);
+  }
+  
+  .menu__list{
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1024px;
+    padding: 1rem 1.5rem;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .menu__link{
+    display: block;
+    padding: 0.25rem 0.5rem;
+    color: var(--white);
+    font-size: 1.15rem;
+    font-weight: 900;
+    text-shadow: 1px 1px 0 var(--black), -1px -1px 0 var(--black) ;
+  }
+
+  .appMain{
+    max-width: 1024px;
+    padding: 1.5rem;
+    margin-left: auto;
+    margin-right: auto;
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-areas: "news news news news news news news news news news news news"
+                         "book book book book favorite favorite favorite twitter twitter twitter twitter twitter"
+                         "book book book book . board board board board board board board";
+    grid-gap: 1rem;
+  }
+
+  .book{
+    grid-area: book;
+  }
+  .news{
+    grid-area: news;
+  }
+  .board{
+    grid-area: board;
+  }
+  .favorite{
+    grid-area: favorite;
+  }
+  .twitter{
+    grid-area: twitter;
+  }
+
+  /* 푸터 */
+  .appFooter{
+    text-align: center;
+  }
+}
+
+
+@media(-webkit-min-device-pixel-ratio: 2), (min-resolution: 144dpi){
+  .logo__link{
+      background-image:url(../images/webcafe-logo@2x.png);
+      background-size:12.75rem 3.6875rem
+  }
+}
