@@ -781,31 +781,50 @@ body {
     linear-gradient(to bottom, #ccc 0%, #eee 35%, #fff 60%, #fff 100%);
 }
 .footer-inner {
-  padding: 10px 0;
   display: grid;
-  grid-template-columns: 100px 760px 85px;
-  grid-template-rows: 35px 1fr;
-}
-.footer-logo {
-  grid-column: 1/2;
-}
-.guide-list {
-  grid-column: 2/3;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-  background: #aaa;
-  border-radius: 20px;
-}
-.badge-container {
-  grid-column: 3/4;
-}
-.address,
-small {
-  grid-column: 2/3;
-  grid-row: 2/3;
+  grid-template-columns: 140px 1fr 120px;
+  padding: 20px 0;
 }
 
-small {
-  margin-top: 20px;
+/* 푸터 로고 */
+.footer-logo {
+  grid-area: 1/1/4/2;
+  align-self: center;
+  justify-self: center;
+}
+
+/* 가이드 링크 */
+.guide-list {
+  grid-area: 1/2/2/3;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  background: #7b8385;
+  color: #fff;
+  border-radius: 20px;
+  padding: 4px 20px;
+  margin: 5px 20px;
+  text-transform: uppercase;
+}
+
+.guide-list a {
+  display: block;
+  padding: 6px 10px;
+}
+
+/* 주소 */
+.address {
+  grid-area: 2/2/3/3;
+  margin: 5px 20px;
+}
+
+/* 저작권 정보 */
+.copyright {
+  grid-area: 3/2/4/3;
+  margin: 5px 20px;
+}
+
+/* 배지 그룹 */
+.badge-container {
+  grid-area: 1/3/4/4;
 }
