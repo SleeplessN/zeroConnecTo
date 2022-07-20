@@ -2,3 +2,84 @@
 @import url(./a11y.css);
 @import url(./theme.css);
 @import url(./base.css);
+
+/* 공통 아이콘 (Font Awesome) */
+.far {
+  margin-right: var(--spacing-xs);
+}
+
+/* 모든 디바이스 (All Device) */
+/* 공통 로고 */
+.logo {
+  width: 12.75rem; /* 204px */
+  height: 3.687rem; /* 59px */
+}
+.logo__link {
+  display: block;
+  width: 100%;
+  height: 100%;
+  background: url(../images/webcafe-logo.png) no-repeat 0 0/100%;
+}
+/* 공통 memberOnly */
+.memberOnly {
+  display: flex;
+}
+/* 공통 searchForm */
+.searchForm__group {
+  display: block;
+}
+.searchForm__group .formInput {
+  display: inline-block;
+}
+.searchForm__group button {
+  background: var(--secondary-color);
+  color: var(--white);
+  border: 0;
+  border-radius: 3px;
+  padding: 5px 10px;
+}
+
+/* 모바일 디바이스 (Mobile Device) */
+@media (min-width: 320px) and (max-width: 767px) {
+  .appHeader {
+    background: var(--primary-color);
+  }
+  .logo {
+  }
+  .memberOnly {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    color: var(--white);
+  }
+  .memberOnly a {
+    margin: 0 5px;
+  }
+  .searchForm__group .formInput__input {
+    width: ;
+  }
+  .searchForm__group button {
+    width: 48px;
+  }
+  .button--burger {
+    position: absolute;
+    right: 0;
+    top: 2.5rem;
+  }
+}
+
+/* 데스크탑 디바이스 (Desktop Device) */
+@media (min-width: 768px) {
+}
+
+/* 고해상도 배경이미지 미디어쿼리 */
+@media (-webkit-min-device-pixel-ratio: 2),
+  (min--moz-device-pixel-ratio: 2),
+  (-o-min-device-pixel-ratio: 2/1),
+  (min-device-pixel-ratio: 2),
+  (min-resolution: 192dpi),
+  (min-resolution: 2dppx) {
+  .logo__link {
+    background-image: url(../images/webcafe-logo@2x.png);
+  }
+}
