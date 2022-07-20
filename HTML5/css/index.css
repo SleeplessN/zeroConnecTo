@@ -781,6 +781,31 @@ body {
     linear-gradient(to bottom, #ccc 0%, #eee 35%, #fff 60%, #fff 100%);
 }
 .footer-inner {
-  background: coral;
-  height: 150px;
+  padding: 10px 0;
+  display: grid;
+  grid-template-columns: 100px 760px 85px;
+  grid-template-rows: 35px 1fr;
+}
+.footer-logo {
+  grid-column: 1/2;
+}
+.guide-list {
+  grid-column: 2/3;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  background: #aaa;
+  border-radius: 20px;
+}
+.badge-container {
+  grid-column: 3/4;
+}
+.address,
+small {
+  grid-column: 2/3;
+  grid-row: 2/3;
+}
+
+small {
+  margin-top: 20px;
 }
