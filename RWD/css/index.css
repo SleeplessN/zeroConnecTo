@@ -141,7 +141,7 @@ input[type="search"] {
   color: var(--accent-twitter);
 }
 /* 공통 메인 콘텐츠 섹션 본문 */
-.appMaim[class*="__summary"] {
+.appMain [class*="__summary"] {
   line-height: 1.5;
   margin-top: var(--spacing-base);
 }
