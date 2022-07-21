@@ -140,7 +140,6 @@ input[type="search"] {
     top: 100%;
     transform: translateY(-100%);
   }
-
   .button--burger.is--active .button--burgerBarMiddle {
     transform: translate(-120%, -50%);
   }
@@ -151,6 +150,22 @@ input[type="search"] {
   .button--burger.is--active .button--burgerBarBottom {
     top: 50%;
     transform: translateY(-50%) rotate(-45deg);
+  }
+  /* 모바일 내비게이션 */
+  .menu.is--active {
+    position: absolute;
+    background: rgb(95, 222, 116);
+    top: 0;
+    width: 80%;
+    height: 100%;
+    backdrop-filter: blur(4px);
+  }
+  .menu__list {
+    padding: 15%;
+  }
+  .menu__item {
+    margin: 1rem 0;
+    font-weight: 700;
   }
 }
 
@@ -179,6 +194,18 @@ input[type="search"] {
   /* 데스크탑 메인메뉴 제어버튼 */
   .button--burger {
     display: none;
+  }
+  /* 데스크탑 내비게이션 */
+  .menu__list {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-around;
+    background: rgba(210, 124, 39, 0.815);
+  }
+  .menu__item {
+    padding: 20px 0;
+    color: var(--white);
+    text-shadow: 1px 1px 1px #000;
   }
 }
 
