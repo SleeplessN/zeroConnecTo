@@ -140,25 +140,34 @@ input[type="search"] {
 .accentTwitter {
   color: var(--accent-twitter);
 }
+/* 공통 메인 콘텐츠 섹션 본문 */
+.appMaim[class*="__summary"] {
+  line-height: 1.5;
+  margin-top: var(--spacing-base);
+}
+
 /* 공통 추천 서적 */
-.book {
-  background: yellow;
-}
 .book__cover {
-  text-align: center;
-  font-weight: 600;
-}
-.book__cover img {
   width: 70%;
-  max-width: 300px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+
+.book__coverCaption {
+  margin-top: var(--spacing-base);
 }
 .book__info {
   text-align: center;
-  font-weight: 600;
+  margin-top: var(--spacing-base);
 }
-.book__info dt,
-.book__info dd {
+.book__info dt:nth-child(1),
+.book__info dd:nth-child(2) {
   display: inline-block;
+}
+
+.ratingStar {
+  font-size: var(--text-xl);
 }
 
 /* 모바일 디바이스 (Mobile Device) */
