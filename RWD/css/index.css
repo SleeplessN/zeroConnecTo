@@ -104,6 +104,42 @@ input[type="search"] {
     position: absolute;
     top: 3.75rem;
     right: var(--spacing-md);
+    width: 40px;
+    height: 40px;
+    background: darkblue;
+    display: flex;
+    flex-flow: row nowrap;
+    gap: 0.3125rem;
+  }
+  .button--burgerBarTop,
+  .button--burgerBarMiddle,
+  .button--burgerBarBottom {
+    position: absolute;
+
+    background: var(--white);
+    width: 100%;
+    height: 20%;
+    border-radius: 1.5rem;
+  }
+  .button--burgerBarTop {
+    top: 0%;
+  }
+  .button--burgerBarMiddle {
+    top: 50%;
+    transform: translateY(-50%);
+  }
+  .button--burgerBarBottom {
+    top: 100%;
+    transform: translateY(-100%);
+  }
+  .button--burger.is--active .button--burgerBarTop {
+    transform: translateY(120%) rotate(-45deg);
+  }
+  .button--burger.is--active .button--burgerBarMiddle {
+    display: none;
+  }
+  .button--burger.is--active .button--burgerBarBottom {
+    transform: translateY(-270%) rotate(-135deg);
   }
 }
 
