@@ -82,6 +82,13 @@ input[type="search"] {
   border: 1px solid currentColor;
 }
 
+/* 공통 메인 메뉴 */
+.menu__link {
+  display: block;
+  padding: var(--spacing-xs);
+  font-size: var(--text-md);
+  font-weight: 700;
+}
 /* 모바일 디바이스 (Mobile Device) */
 @media (min-width: 320px) and (max-width: 768px) {
   /* 모바일 헤더 */
@@ -151,21 +158,25 @@ input[type="search"] {
     top: 50%;
     transform: translateY(-50%) rotate(-45deg);
   }
-  /* 모바일 내비게이션 */
-  .menu.is--active {
-    position: absolute;
-    background: rgb(95, 222, 116);
+  /* 모바일 메인 메뉴 */
+  .menu {
+    background: var(--accent-opacity-color);
+    position: fixed;
     top: 0;
-    width: 80%;
-    height: 100%;
+    left: 0;
+    width: 70%;
+    height: 100vh;
     backdrop-filter: blur(4px);
-  }
-  .menu__list {
-    padding: 15%;
+    padding: var(--spacing-md);
+    transform: translateX(-150%);
+    transition: all 300ms;
   }
   .menu__item {
-    margin: 1rem 0;
-    font-weight: 700;
+    border-bottom: 1px solid var(--silver);
+  }
+
+  .menu.is--active {
+    transform: none;
   }
 }
 
@@ -195,17 +206,28 @@ input[type="search"] {
   .button--burger {
     display: none;
   }
-  /* 데스크탑 내비게이션 */
+  /* 데스크탑 메인 메뉴 */
+  .menu {
+    background: var(--secondary-color);
+    padding: var(--spacing-base) var(--spacing-md);
+  }
   .menu__list {
+    max-width: var(--container-width);
+    margin-left: auto;
+    margin-right: auto;
     display: flex;
     flex-flow: row nowrap;
-    justify-content: space-around;
-    background: rgba(210, 124, 39, 0.815);
+    justify-content: space-between;
+    align-items: center;
+    padding: var(--spacing-md);
   }
-  .menu__item {
-    padding: 20px 0;
+  .menu__link {
+    display: block;
+    padding: var(--spacing-xs);
+    font-size: var(--text-md);
+    font-weight: 700;
     color: var(--white);
-    text-shadow: 1px 1px 1px #000;
+    text-shadow: 1px 1px 0 var(--black), -1px -1px 0 var(--black);
   }
 }
 
