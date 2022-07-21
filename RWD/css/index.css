@@ -108,7 +108,6 @@ input[type="search"] {
   justify-content: center;
   background-image: url(../assets/images/sprite_main.png);
   background-repeat: no-repeat;
-  background-color: pink;
 }
 .spriteBook {
   background-position: 0 0;
@@ -168,6 +167,33 @@ input[type="search"] {
 
 .ratingStar {
   font-size: var(--text-xl);
+}
+/* 공통 새소식 */
+.news__date {
+  display: block;
+  text-align: center;
+  margin-top: var(--spacing-xs);
+}
+
+/* 반응형 iframe */
+.iframeWrapper {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  height: 0 !important;
+}
+.iframeWrapper iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+.iframeRatio-4-3 {
+  padding-top: 75%;
+}
+.iframeRatio-16-9 {
+  padding-top: 56.25%;
 }
 
 /* 모바일 디바이스 (Mobile Device) */
