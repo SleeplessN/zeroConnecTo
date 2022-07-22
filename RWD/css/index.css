@@ -231,6 +231,30 @@ input[type="search"] {
   margin-top: var(--spacing-xs);
 }
 
+/* 공통 트위터 */
+.twitter__container {
+  display: flow-root;
+}
+.twitter__userInfo {
+  display: inline-block;
+  width: 50%;
+  margin-right: 0;
+}
+.twitter__userName,
+.twitter__userId {
+  display: inline-block;
+}
+
+.twitter__userProfile {
+  float: right;
+  shape-outside: circle(50%);
+  border: 1px solid var(--black);
+  border-radius: 70%;
+  overflow: hidden;
+}
+.twitter__summary {
+  margin-bottom: var(--spacing-xs);
+}
 /* 모바일 디바이스 (Mobile Device) */
 @media (min-width: 320px) and (max-width: 768px) {
   /* 모바일 헤더 */
