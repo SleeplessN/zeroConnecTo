@@ -232,28 +232,27 @@ input[type="search"] {
 }
 
 /* 공통 트위터 */
+.twitter {
+  background: pink;
+}
 .twitter__container {
   display: flow-root;
 }
 .twitter__userInfo {
-  display: inline-block;
-  width: 50%;
-  margin-right: 0;
+  display: inline-flex;
+  gap: var(--spacing-sm);
 }
-.twitter__userName,
-.twitter__userId {
-  display: inline-block;
-}
-
 .twitter__userProfile {
   float: right;
   shape-outside: circle(50%);
-  border: 1px solid var(--black);
-  border-radius: 70%;
-  overflow: hidden;
+  width: 50px;
+  height: 50px;
+  max-width: 110px;
 }
-.twitter__summary {
-  margin-bottom: var(--spacing-xs);
+.twitter__userProfileImage {
+  border: 1px solid var(--primary-color);
+  border-radius: 50%;
+  vertical-align: top;
 }
 /* 모바일 디바이스 (Mobile Device) */
 @media (min-width: 320px) and (max-width: 768px) {
@@ -416,6 +415,18 @@ input[type="search"] {
   }
   .spriteBook::before {
     background: url("../assets/images/sprite_main.png");
+  }
+  /* 데스크탑 트위터 */
+  .twitter__userProfile {
+    object-fit: cover;
+    width: 100px;
+    height: 100px;
+  }
+  .twitter__userProfileImage {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: 20% 20%;
   }
 }
 
