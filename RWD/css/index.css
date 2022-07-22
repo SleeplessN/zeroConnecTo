@@ -353,6 +353,40 @@ input[type="search"] {
     color: var(--accent-favorite);
     font-size: var(--text-sm);
   }
+  /* 모바일 메인 콘텐츠 */
+  .appMain {
+    background: yellow;
+    display: flex;
+    flex-flow: column nowrap;
+    gap: var(--spacing-base);
+  }
+}
+/* 모바일 Medium Size (640px 이상) */
+@media (min-width: 640px) and (max-width: 767px) {
+  /* 모바일(MD) 메인콘텐츠 */
+  .appMain {
+    background: pink;
+    flex-flow: row wrap;
+    justify-content: space-around;
+  }
+  .news {
+    order: -1;
+    width: 100%;
+  }
+  .board {
+    order: 0;
+    width: 45%;
+  }
+  .book {
+    order: 4;
+    width: 45%;
+  }
+  .favorite {
+    width: 45%;
+  }
+  .twitter {
+    width: 45%;
+  }
 }
 
 /* 데스크탑 디바이스 (Desktop Device) */
@@ -423,6 +457,12 @@ input[type="search"] {
   .twitter__userProfile {
     width: 100px;
     height: 100px;
+  }
+  /* 데스크탑 메인 콘텐츠 */
+  .appMain {
+    background: skyblue;
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
   }
 }
 
