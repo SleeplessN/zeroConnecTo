@@ -227,6 +227,9 @@ input[type="search"] {
 }
 
 /* 공통 인기사이트 */
+.favorite__item {
+  margin-top: var(--spacing-xs);
+}
 
 /* 모바일 디바이스 (Mobile Device) */
 @media (min-width: 320px) and (max-width: 768px) {
@@ -316,6 +319,13 @@ input[type="search"] {
 
   .menu.is--active {
     transform: none;
+  }
+  /* 모바일 인기사이트 */
+  .favorite__link::after {
+    content: attr(data-tooltip);
+    margin-left: var(--spacing-xs);
+    color: var(--accent-favorite);
+    font-size: var(--text-sm);
   }
 }
 
