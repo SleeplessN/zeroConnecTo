@@ -196,6 +196,40 @@ input[type="search"] {
   padding-top: 56.25%;
 }
 
+/* 공통 게시판 */
+.board {
+  position: relative;
+}
+.board__list {
+  display: flex;
+  flex-flow: column nowrap;
+  gap: var(--spacing-base);
+  margin-top: 1.5rem;
+}
+.board__item {
+  white-space: nowrap;
+}
+.board__link {
+  display: inline-block;
+  width: 80%;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.board__date {
+  width: 20%;
+}
+.board__more {
+  position: absolute;
+  top: 0.5rem;
+  right: 0;
+}
+/* 공통 인기사이트 */
+.favorite__list {
+  display: flex;
+  flex-flow: column nowrap;
+  gap: var(--spacing-md);
+}
 /* 모바일 디바이스 (Mobile Device) */
 @media (min-width: 320px) and (max-width: 768px) {
   /* 모바일 헤더 */
@@ -284,6 +318,12 @@ input[type="search"] {
 
   .menu.is--active {
     transform: none;
+  }
+  /* 모바일 인기사이트 */
+  .favorite__item::after {
+    content: attr(data-tooltip);
+    color: var(--yellow);
+    width: 100%;
   }
 }
 
