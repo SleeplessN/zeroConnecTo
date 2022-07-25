@@ -1,0 +1,13 @@
+.box {
+  width: 200px;
+  margin-left: 200px;
+  background: pink url("/assets/images/bg.jpg");
+}
+
+.box a {
+  font-size: 60px;
+  text-decoration: none;
+  color: teal;
+}
+
+/*# sourceMappingURL=index.css.map */
