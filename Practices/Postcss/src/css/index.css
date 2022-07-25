@@ -1,0 +1,68 @@
+/* @import "./reset.css"; */
+
+:root {
+  --mainColor: rgba(18, 52, 86, 0.47059);
+}
+
+body {
+  color: rgba(18, 52, 86, 0.47059);
+  color: var(--mainColor);
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell,
+    Noto Sans, sans-serif;
+}
+
+a {
+  color: rgba(0, 0, 255, 0.9);
+}
+
+a:hover {
+  color: #639;
+}
+
+a span {
+  font-weight: bold;
+}
+
+input:hover {
+  color: rgb(143, 0, 0);
+  color: color(display-p3 0.52929 0 0);
+}
+
+input:focus {
+  color: rgb(143, 0, 0);
+  color: color(display-p3 0.52929 0 0);
+}
+
+button:hover {
+  color: rgb(143, 0, 0);
+  color: color(display-p3 0.52929 0 0);
+}
+
+button:focus {
+  color: rgb(143, 0, 0);
+  color: color(display-p3 0.52929 0 0);
+}
+
+body {
+  font-size: 24px;
+  background: yellow;
+  line-height: 1.5;
+  color: #000;
+}
+
+@media (min-width: 1024px) {
+  body {
+    background: yellow;
+  }
+}
+
+@media (min-width: 1024px) {
+  body {
+    color: yellow;
+  }
+}
+@media (min-width: 1024px) {
+  body {
+    font-size: 36px;
+  }
+}
