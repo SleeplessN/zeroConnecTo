@@ -1,12 +1,5 @@
-// index.scss
-@use "./base/index";
 @use "./utils" as *;
 
 .appFooter {
-  @include mobile {
-    background: yellow;
-  }
-  @include desktop {
-    background: skyblue;
-  }
+  @include boxSizeMax;
 }
