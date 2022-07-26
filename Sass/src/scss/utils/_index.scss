@@ -1,1 +1,5 @@
-// index.scss
+@forward "./a11y";
+@forward "./color";
+@forward "./variable";
+@forward "./flexbox";
+@forward "./media-query";
