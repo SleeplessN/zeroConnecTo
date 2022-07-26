@@ -1,7 +1,7 @@
 {
   "scripts": {
     "start": "run-p watch serve",
-    "sass": "sass src/scss/index.scss src/css/index.css",
+    "sass": "sass src/scss:src/css",
     "nosource": "npm run sass -- --no-source-map",
     "watch": "npm run sass -- --watch",
     "serve": "live-server ./src"
@@ -9,6 +9,7 @@
   "devDependencies": {
     "live-server": "^1.2.2",
     "npm-run-all": "^4.1.5",
+    "rimraf": "^3.0.2",
     "sass": "^1.54.0"
   }
 }
