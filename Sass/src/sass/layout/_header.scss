@@ -1,0 +1,111 @@
+@use "./../utils" as *;
+@use "./../components" as *;
+
+// 헤더
+.appHeader {
+  @include mobile {
+    position: relative;
+    background: $primary-color;
+    @include flexbox($wrap: wrap);
+    margin: 0 rem(-20px);
+    padding: 0 rem(20px);
+    color: $white;
+  }
+
+  @include desktop {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    grid-template-rows: 50px;
+  }
+}
+
+.logo,
+.memberOnly,
+.searchForm {
+  @include mobile {
+    width: 100%;
+  }
+}
+
+// 로고
+.logo {
+  padding: rem(8px) 0;
+  @include mobile {
+  }
+  @include desktop {
+    grid-area: 1/1/3/2;
+    align-self: center;
+  }
+
+  &__link {
+    $w: rem(204px);
+    $h: rem(59px);
+    display: block;
+    width: $w;
+    height: $h;
+    @include bgRetina("webcafe-logo", "png");
+  }
+}
+
+// 멤버 서비스 링크
+.memberOnly {
+  @include flexbox($justify: flex-end);
+  @include paddingY(8px);
+  @include mobile {
+    order: -1;
+  }
+  @include desktop {
+    grid-area: 1/2/2/3;
+  }
+
+  .divider {
+    @include marginX(8px);
+  }
+
+  a {
+    display: inline-block;
+    @include paddingY(8px);
+  }
+}
+
+// 검샘 폼
+.searchForm {
+  padding-bottom: rem(16px);
+
+  @include desktop {
+    grid-area: 2/2/3/3;
+  }
+
+  &__group {
+    @include flexbox($justify: flex-end, $items: center);
+    .button--primary {
+      margin-left: rem(10px);
+    }
+  }
+
+  .formInput {
+    @include mobile {
+      flex-grow: 1;
+    }
+  }
+  .formInput__input {
+    @include mobile {
+      width: 100%;
+    }
+    @include desktop {
+      width: rem(400px);
+    }
+  }
+}
+
+.button--burger {
+  @include mobile {
+    position: absolute;
+    top: rem(48px);
+    right: rem(20px);
+  }
+
+  @include desktop {
+    display: none;
+  }
+}

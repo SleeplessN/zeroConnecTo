@@ -1,0 +1,10 @@
+@use "./../utils" as *;
+
+.app {
+  min-width: 320px;
+  padding: 0 rem(20px);
+
+  @include desktop {
+    @include boxSizeMinMax;
+  }
+}

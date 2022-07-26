@@ -1,0 +1,213 @@
+@use "./../utils" as *;
+@use "sass:color";
+// home
+.homeMain {
+  @include mobile {
+    @include flexbox($wrap: wrap);
+  }
+  @include desktop {
+    @include gridbox;
+    grid-template-areas:
+      "news news news news news news news news news news news news"
+      "book book book book favorite favorite favorite twitter twitter twitter twitter twitter"
+      "book book book book . board board board board board board board";
+  }
+}
+
+// 메인 섹션 공통
+.book,
+.news,
+.board,
+.favorite,
+.twitter {
+  margin: rem(24px) 0;
+  @include mobile {
+    width: 100%;
+  }
+}
+
+// 아이콘 공통
+.far,
+.fas {
+  margin-right: rem(8px);
+}
+
+// 섹션 제목 공통
+.book__title,
+.news__title,
+.board__title,
+.favorite__title,
+.twitter__title {
+  @include flexbox(column);
+  font-size: rem(20px);
+  font-weight: 500;
+  padding-top: rem(4px);
+  margin-bottom: rem(24px);
+}
+
+// .news__title{
+//   background-position: 0 -230px;
+// }
+
+[class*="__enTitle"] {
+  font-size: rem(14px);
+  margin-top: rem(4px);
+}
+
+[class*="__summary"] {
+  line-height: 1.5;
+}
+
+// 추천서적
+.book {
+  grid-area: book;
+
+  &__cover {
+    width: 70%;
+    @include autoMargin;
+    text-align: center;
+
+    &Image {
+      @include respons;
+    }
+
+    &Caption {
+      margin: rem(16px) 0;
+    }
+  }
+
+  &__info {
+    text-align: center;
+
+    dt,
+    dd:nth-of-type(1) {
+      display: inline-block;
+    }
+
+    .rating {
+      font-size: rem(24px);
+      margin: rem(8px) 0 rem(16px);
+
+      @for $i from 1 through 5 {
+        &Star span:nth-child(#{$i}) {
+          color: darken($accent-book, $i * 5%);
+        }
+      }
+    }
+  }
+}
+
+// 새소식
+.news {
+  grid-area: news;
+
+  &__videoContainer {
+    margin-bottom: rem(16px);
+  }
+
+  .iframeWrapper {
+    @include responsIframe;
+  }
+
+  &__video {
+    @include respons(width);
+  }
+
+  &__date {
+    display: block;
+    text-align: right;
+    margin-top: rem(8px);
+  }
+}
+
+// 게시판
+.board {
+  grid-area: board;
+  position: relative;
+
+  &__item {
+    @include flexbox;
+    margin: rem(8px) 0;
+  }
+
+  &__link {
+    flex-grow: 1;
+    margin-right: rem(10px);
+    @include textEllipis;
+  }
+
+  &__date {
+    white-space: nowrap;
+    position: relative;
+    top: rem(3px);
+  }
+
+  &__more {
+    @include pos($t: rem(4px), $r: 0);
+    @include paddingY(8px);
+  }
+}
+
+// 인기사이트
+.favorite {
+  grid-area: favorite;
+
+  &__item {
+    margin: rem(8px) 0;
+  }
+
+  &__link {
+    display: block;
+    padding: rem(8px) 0;
+
+    @include mobile {
+      &::after {
+        content: attr(data-tooltip);
+        font-size: clamp(0.75rem, 4vw, 1.125rem);
+        margin-left: rem(8px);
+        @include textEllipis;
+        color: $orange;
+        position: relative;
+        top: rem(4px);
+      }
+    }
+  }
+}
+
+// 트위터
+.twitter {
+  grid-area: twitter;
+
+  &__container {
+    @include clearFix;
+  }
+
+  &__userInfo {
+    display: inline-flex;
+    margin-bottom: rem(12px);
+  }
+
+  &__userId {
+    margin-left: rem(6px);
+    transform: translateY(-2px);
+  }
+
+  &__userProfile {
+    width: clamp(48px, 25vw, 100px);
+    height: clamp(64px, 25vw, 100px);
+    border: 1px solid $border-color;
+    float: right;
+    border-radius: 50%;
+    overflow: hidden;
+    shape-outside: circle(50%);
+  }
+
+  &__userProfileImage {
+    @include respons(width);
+  }
+
+  &__date {
+    display: block;
+    margin-top: rem(8px);
+  }
+}

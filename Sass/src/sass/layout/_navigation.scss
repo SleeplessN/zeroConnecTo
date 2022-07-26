@@ -1,0 +1,59 @@
+@use "./../utils" as *;
+// navigation
+
+// 메인 메뉴
+.menu {
+  &.is-active .menu__list {
+    transform: none;
+  }
+
+  @include desktop {
+    background: $secondary-color;
+    @include boxSizeFull;
+  }
+
+  &__list {
+    @include mobile {
+      @include mobile {
+        background: $accent-opacity-color;
+        position: fixed;
+        left: 0;
+        top: 0;
+        transform: translateX(-110vw);
+        width: 75vw;
+        height: 100vh;
+        padding: rem(32px);
+        z-index: 10;
+        transition: all 200ms ease-in-out;
+      }
+    }
+    @include desktop {
+      @include boxSizeMinMax;
+      @include flexbox($justify: space-around);
+    }
+  }
+
+  &__item {
+    @include mobile {
+      @include marginY(8px);
+    }
+    @include desktop {
+      @include marginY(16px);
+    }
+  }
+
+  &__link {
+    display: block;
+    font-size: rem(18px);
+    @include mobile {
+      padding: rem(8px);
+      font-weight: 500;
+    }
+    @include desktop {
+      @include paddingY(8px);
+      color: $white;
+      font-weight: 700;
+      text-shadow: 1px 1px 0 $shadow-color, -1px -1px 0 $shadow-color;
+    }
+  }
+}

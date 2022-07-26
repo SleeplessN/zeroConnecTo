@@ -1,0 +1,25 @@
+@use "./../utils" as *;
+
+.appFooter {
+  background: $primary-color;
+  color: $white;
+  padding-top: rem(32px);
+  padding-bottom: rem(24px);
+  line-height: 1.5;
+
+  @include boxSizeFull;
+  @include mobile {
+    @include paddingX(20px);
+  }
+  @include desktop {
+    text-align: center;
+  }
+
+  @at-root .address {
+    margin-bottom: rem(16px);
+
+    @include mobile {
+      @include flexbox(column);
+    }
+  }
+}

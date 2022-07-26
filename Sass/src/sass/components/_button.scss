@@ -1,0 +1,68 @@
+@use "./../utils" as *;
+// button
+.button {
+  appearance: none;
+  border: 0;
+  background: $black;
+  color: $white;
+  @include paddingY(8px);
+  @include paddingX(16px);
+  font-size: rem(14px);
+
+  &None {
+    appearance: none;
+    border: 0;
+    padding: 0;
+    background: transparent;
+  }
+
+  &--primary {
+    background: $brown;
+  }
+
+  // 햄버거 버튼
+  &--burger {
+    overflow: hidden;
+    width: rem(32px);
+    height: rem(32px);
+    position: relative;
+
+    &BarTop,
+    &BarMiddle,
+    &BarBottom {
+      position: absolute;
+      left: 0;
+      width: 100%;
+      height: 25%;
+      border-radius: 6px;
+      background: $white;
+      transition: all 200ms ease-in-out;
+    }
+
+    &BarTop {
+      top: 0;
+    }
+    &BarMiddle {
+      top: 50%;
+      transform: translateY(-50%);
+    }
+    &BarBottom {
+      top: 100%;
+      transform: translateY(-100%);
+    }
+
+    &.is-active {
+      .button--burgerBarTop {
+        top: 50%;
+        transform: translateY(-50%) rotate(45deg);
+      }
+      .button--burgerBarMiddle {
+        transform: translate(-120%, -50%);
+      }
+      .button--burgerBarBottom {
+        top: 50%;
+        transform: translateY(-50%) rotate(-45deg);
+      }
+    }
+  }
+}
