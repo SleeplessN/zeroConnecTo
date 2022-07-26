@@ -1,3 +1,4 @@
+@use "sass:math";
 @use "./unit" as *;
 @use "./variable" as *;
 
@@ -48,4 +49,56 @@
 @mixin boxSizeMax($max: $container-width) {
   max-width: $max;
   @include autoMargin;
+}
+
+// 말줄임표 믹스인
+@mixin textEllipis {
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+// 반응형 iframe
+@mixin responseIframe($w: 16, $h: 9) {
+  position: relative;
+  width: 100%;
+  height: 0 !important;
+  padding-top: math.div($h, $w) * 100%; // 56.25%
+
+  iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+}
+
+// float 이슈를 해결하기 위한 믹스인
+@mixin clearFix {
+  &::after {
+    content: "";
+    display: block;
+    clear: both;
+  }
+}
+
+// 고행상도 디스플레이를 위한 배경이미지 관련 믹스인
+@mixin bgRetina($file, $type) {
+  background-image: url("../../assets/images/" + $file + "." + $type);
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+
+  @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 144dpi) {
+    & {
+      background-image: url("../../assets/images/" + $file + "@2x." + $type);
+    }
+  }
+}
+
+// 텍스트 스타일 믹스인
+@mixin textStyle($size) {
+  font-size: rem($size);
+  letter-spacing: -0.02rem;
+  // line-height: 1.5;
 }
