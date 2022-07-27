@@ -628,85 +628,65 @@ legend {
   }
 }
 
-.appHeader {
+[class*=__title] {
   display: flex;
   flex-direction: column;
-  justify-content: flex-start;
+  justify-content: center;
   align-items: stretch;
   flex-wrap: nowrap;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  line-height: 1.4;
+  font-size: 1.125rem;
+}
+
+[class*=__summary] {
+  font-size: 0.875rem;
+  letter-spacing: -0.02rem;
+}
+
+.home {
+  padding: 1rem 1.5rem;
+}
+.home [class*=__title] {
+  margin-bottom: 1rem;
 }
 @media (max-width: 767px) {
-  .appHeader {
-    background: #38302e;
+  .home {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: stretch;
+    flex-wrap: nowrap;
+    gap: 1rem;
   }
 }
 @media (min-width: 768px) {
-  .appHeader {
-    position: relative;
-    background: #fff;
+  .home {
     max-width: 64rem;
     margin-left: auto;
     margin-right: auto;
-    background: yellow;
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: auto;
+    gap: 1.25rem;
+    grid-template-areas: "news news news news news news news news news news news news" "book book book book favorite favorite favorite twitter twitter twitter twitter twitter" "book book book book . board board board board board board board";
   }
 }
-
-@media (min-width: 768px) {
-  .logo {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-  }
+.home .book {
+  grid-area: book;
 }
-.logo__link {
-  display: block;
-  width: 12.75rem;
-  height: 3.0625rem;
-  background-image: url("../../assets/images/webcafe-logo.png");
-  background-repeat: no-repeat;
-  background-size: 100% 100%;
+.home .news {
+  grid-area: news;
 }
-@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 144dpi) {
-  .logo__link {
-    background-image: url("../../assets/images/webcafe-logo@2x.png");
-  }
+.home .board {
+  grid-area: board;
 }
-
-.memberOnly {
-  display: flex;
-  flex-direction: row;
-  justify-content: flex-end;
-  align-items: center;
-  flex-wrap: nowrap;
+.home .favorite {
+  grid-area: favorite;
 }
-@media (max-width: 767px) {
-  .memberOnly {
-    order: -1;
-    color: #fff;
-    font-size: 0.875rem;
-    letter-spacing: -0.02rem;
-  }
-}
-
-.searchForm__group {
-  display: flex;
-  flex-direction: row;
-  justify-content: flex-end;
-  align-items: stretch;
-  flex-wrap: nowrap;
-}
-@media (max-width: 767px) {
-  .searchForm .formInput {
-    flex-grow: 1;
-  }
-}
-@media (min-width: 768px) {
-  .searchForm .formInput {
-    width: 25rem;
-  }
-}
-.searchForm .formInput__input {
-  width: 100%;
+.home .twitter {
+  grid-area: twitter;
 }
 
 .box {

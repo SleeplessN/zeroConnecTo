@@ -1,59 +1,46 @@
 @use "./../utils" as *;
+.home {
+}
 
-// 헤더
-.appHeader {
-  @include flexbox(column);
-  @include mobile {
-    background: $primary-color;
+[class*="__title"] {
+  @include flexbox(column, center);
+  @include textHeading(18px);
+}
+
+[class*="__summary"] {
+  @include textStyle(14px);
+}
+
+.home {
+  padding: rem(16px) rem(24px);
+
+  [class*="__title"] {
+    margin-bottom: rem(16px);
   }
+
+  @include mobile {
+    @include flexbox(column);
+    gap: rem(16px);
+  }
+
   @include desktop {
-    position: relative;
-    background: $white;
     @include boxSizeMax;
-    background: yellow;
+    @include gridbox();
+    grid-template-areas: "news news news news news news news news news news news news" "book book book book favorite favorite favorite twitter twitter twitter twitter twitter" "book book book book . board board board board board board board";
   }
-}
-// 로고
-.logo {
-  @include desktop {
-    @include posCenterY;
+  .book {
+    grid-area: book;
   }
-
-  &__link {
-    display: block;
-    $w: rem(204px);
-    $h: rem(49px);
-    width: $w;
-    height: $h;
-    @include bgRetina("webcafe-logo", "png");
+  .news {
+    grid-area: news;
   }
-}
-
-// 멤버서비스
-.memberOnly {
-  @include flexbox($j: flex-end, $a: center);
-
-  @include mobile {
-    order: -1;
-    color: $white;
-    @include textStyle(14px);
+  .board {
+    grid-area: board;
   }
-}
-
-// 검색 폼
-.searchForm {
-  &__group {
-    @include flexbox($j: flex-end);
+  .favorite {
+    grid-area: favorite;
   }
-  .formInput {
-    @include mobile {
-      flex-grow: 1;
-    }
-    @include desktop {
-      width: rem(400px);
-    }
-    &__input {
-      width: 100%;
-    }
+  .twitter {
+    grid-area: twitter;
   }
 }

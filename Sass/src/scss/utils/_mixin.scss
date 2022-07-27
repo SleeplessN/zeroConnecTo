@@ -119,3 +119,18 @@
   letter-spacing: -0.02rem;
   // line-height: 1.5;
 }
+
+@mixin textHeading($size) {
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  line-height: 1.4;
+  font-size: rem($size);
+}
+
+// 그리드 믹스인
+@mixin gridbox($column-count: 12, $gap: 20px) {
+  display: grid;
+  grid-template-columns: repeat($column-count, 1fr);
+  grid-template-rows: auto;
+  gap: rem($gap);
+}
