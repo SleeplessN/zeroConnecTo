@@ -1,0 +1,7 @@
+@use "../utils/var";
+@forward "../utils/var" as v-*;
+
+.button {
+  padding: var.$spacing;
+}
+$spacing: 20px;

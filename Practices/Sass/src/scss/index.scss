@@ -1,15 +1,2 @@
-$color-primary: pink;
-$url-images: "/assets/images/";
-$w: 200px;
-
-.box {
-  width: $w;
-  margin-left: $w;
-  background: $color-primary url($url-images + "bg.jpg");
-}
-
-.box a {
-  font-size: 60px;
-  text-decoration: none;
-  color: teal;
-}
+@use "./component/button";
+@use "./component/card";

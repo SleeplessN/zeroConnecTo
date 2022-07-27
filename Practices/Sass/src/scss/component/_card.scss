@@ -1,0 +1,5 @@
+@use "./button" as btn;
+
+.card {
+  margin: btn.$v-spacing;
+}
