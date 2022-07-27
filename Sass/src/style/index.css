@@ -572,24 +572,52 @@ legend {
 }
 .searchForm .button--primary {
   margin-left: 1rem;
+  border: 0;
 }
 
+.menu {
+  background: pink;
+}
 @media (max-width: 767px) {
   .menu {
-    background: pink;
+    display: none;
   }
 }
 @media (min-width: 768px) {
   .menu {
-    background: pink;
     max-width: 64rem;
     margin-left: auto;
     margin-right: auto;
-    padding-top: 1.171875rem;
-    padding-bottom: 1.171875rem;
+    padding-top: 2.25rem;
+    padding-bottom: 2.25rem;
   }
 }
 
+@media (max-width: 767px) {
+  .is--active {
+    display: block;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 70%;
+    height: 100vh;
+  }
+}
+
+@media (max-width: 767px) {
+  .menu__list {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: stretch;
+    flex-wrap: nowrap;
+    gap: 0.875rem;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
+  }
+}
 @media (min-width: 768px) {
   .menu__list {
     display: flex;
@@ -597,6 +625,17 @@ legend {
     justify-content: space-between;
     align-items: stretch;
     flex-wrap: nowrap;
+    margin-left: 1.75rem;
+    margin-right: 1.75rem;
+  }
+}
+
+@media (max-width: 767px) {
+  .meny__item::after {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 2px;
   }
 }
 

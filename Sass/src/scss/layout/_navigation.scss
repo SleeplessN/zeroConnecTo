@@ -2,20 +2,46 @@
 
 // navigation.scss
 .menu {
+  background: pink;
   @include mobile {
-    background: pink;
+    display: none;
   }
   @include desktop {
-    background: pink;
     @include boxSizeMax;
-    @include paddingY(rem(300px));
+    @include paddingY(36px);
+  }
+}
+
+.is--active {
+  @include mobile {
+    display: block;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 70%;
+    height: 100vh;
   }
 }
 .menu__list {
   @include mobile {
+    @include flexbox($d: column);
+    gap: rem(14px);
+    @include paddingX(24px);
+    @include paddingY(24px);
   }
   @include desktop {
     @include flexbox($j: space-between);
+    @include marginX(28px);
+  }
+}
+.meny__item {
+  @include mobile {
+    &::after {
+      content: "";
+      display: block;
+      width: 100%;
+      height: 2px;
+    }
   }
 }
 .menu__link {
