@@ -1,1 +1,66 @@
-// header.scss
+@use "./../utils" as *;
+@use "./../components" as *; // 헤더
+
+.appHeader {
+  @include paddingX(24px);
+  @include paddingY(16px);
+  @include flexbox(column);
+
+  @include mobile {
+    background: $primary-color;
+  }
+  @include desktop {
+    position: relative;
+    background: $white;
+    @include boxSizeMax;
+    background: yellow;
+  }
+}
+// 로고
+.logo {
+  @include desktop {
+    @include posCenterY;
+  }
+
+  &__link {
+    display: block;
+    $w: rem(204px);
+    $h: rem(49px);
+    width: $w;
+    height: $h;
+    @include bgRetina("webcafe-logo", "png");
+  }
+}
+
+// 멤버서비스
+.memberOnly {
+  @include flexbox($j: flex-end, $a: center);
+
+  @include mobile {
+    order: -1;
+    color: $white;
+    @include textStyle(14px);
+  }
+}
+
+// 검색 폼
+.searchForm {
+  margin-top: rem(16px);
+  &__group {
+    @include flexbox($j: flex-end);
+  }
+  .formInput {
+    @include mobile {
+      flex-grow: 1;
+    }
+    @include desktop {
+      width: rem(400px);
+    }
+    &__input {
+      width: 100%;
+    }
+  }
+  .button--primary {
+    margin-left: rem(16px);
+  }
+}

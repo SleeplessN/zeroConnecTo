@@ -1,1 +1,30 @@
+@use "../utils" as *;
+
 // navigation.scss
+.menu {
+  @include mobile {
+    background: pink;
+  }
+  @include desktop {
+    background: pink;
+    @include boxSizeMax;
+    @include paddingY(rem(300px));
+  }
+}
+.menu__list {
+  @include mobile {
+  }
+  @include desktop {
+    @include flexbox($j: space-between);
+  }
+}
+.menu__link {
+  @include mobile {
+    @include paddingX(rem(20px));
+  }
+  @include desktop {
+    color: white;
+    font-weight: 800;
+    text-shadow: 1px 1px 0 black, -1px -1px 0 black;
+  }
+}
