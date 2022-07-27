@@ -68,6 +68,9 @@
   @include autoMargin;
 }
 
+@mixin boxCenter($width) {
+}
+
 // 말줄임표 믹스인
 @mixin textEllipis {
   text-overflow: ellipsis;

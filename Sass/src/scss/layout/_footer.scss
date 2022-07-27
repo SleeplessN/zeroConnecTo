@@ -1,1 +1,18 @@
-// footer.scss
+@use "./../utils" as *;
+
+.appFooter {
+  background: $primary-color;
+  color: $white;
+  padding: rem(24px);
+
+  @include desktop {
+    text-align: center;
+  }
+}
+
+.address {
+  margin-bottom: rem(16px);
+  @include mobile {
+    @include flexbox(column);
+  }
+}
