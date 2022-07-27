@@ -19,9 +19,8 @@
   .buttonWrapper {
     @include mobile {
       // 위치지정
-      position: absolute;
-      top: rem(50px);
-      right: rem(25px);
+      @include posRight(52px, 20px);
+      padding: rem(4px);
     }
     @include desktop {
       display: none;

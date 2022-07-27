@@ -405,36 +405,40 @@ legend {
 }
 
 .button {
-  border: 0;
   padding: 0.25rem 1rem;
   border-radius: 0.25rem;
   height: 2rem;
   font-size: 0.875rem;
+}
+.button--none {
+  border: 0;
+  background: transparent;
+  padding: 0;
 }
 .button--fill {
   background: #988574;
   color: #fff;
 }
 
-.button--burger {
-  position: relative;
+.buttonWrapper {
   overflow: hidden;
+}
+
+.button--burger {
   width: 2rem;
   height: 2rem;
   border: 0;
-  background: transparent;
-  transition: all 500ms ease-in;
+  position: relative;
 }
 .button--burgerBarTop, .button--burgerBarMiddle, .button--burgerBarBottom {
   position: absolute;
-  left: 0;
+  top: 0rem;
+  left: 0rem;
   width: 100%;
   height: 20%;
-  border-radius: 6px;
   background: #fff;
-}
-.button--burgerBarTop {
-  top: 0%;
+  border-radius: 0.5rem;
+  transition: all 0.3s;
 }
 .button--burgerBarMiddle {
   top: 50%;
@@ -444,16 +448,17 @@ legend {
   top: 100%;
   transform: translateY(-100%);
 }
-.button--burger.is-active .button--burgerBarTop {
+.is--active .button--burgerBarTop {
   top: 50%;
-  transform: translateY(-50%) rotate(45deg);
+  transform: translate(0%, -50%) rotate(45deg);
 }
-.button--burger.is-active .button--burgerBarMiddle {
-  transform: translate(-120%, -50%);
-}
-.button--burger.is-active .button--burgerBarBottom {
+.is--active .button--burgerBarMiddle {
   top: 50%;
-  transform: translateY(-50%) rotate(-45deg);
+  transform: translate(-120%, -50%) rotate(0deg);
+}
+.is--active .button--burgerBarBottom {
+  top: 50%;
+  transform: translate(0%, -50%) rotate(-45deg);
 }
 
 .formInput__input {
@@ -494,8 +499,9 @@ legend {
 @media (max-width: 767px) {
   .appHeader .buttonWrapper {
     position: absolute;
-    top: 3.125rem;
-    right: 1.5625rem;
+    top: 3.25rem;
+    right: 1.25rem;
+    padding: 0.25rem;
   }
 }
 @media (min-width: 768px) {

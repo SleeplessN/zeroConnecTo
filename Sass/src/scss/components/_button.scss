@@ -1,40 +1,43 @@
 @use "./../utils" as *;
 
 .button {
-  border: 0;
   padding: rem(4px) rem(16px);
   border-radius: rem(4px);
   height: rem(32px);
   font-size: rem(14px);
+
+  &--none {
+    border: 0;
+    background: transparent;
+    padding: 0;
+  }
 
   &--fill {
     background: $secondary-color;
     color: $white;
   }
 }
+.buttonWrapper {
+  overflow: hidden;
+}
 
 .button--burger {
-  position: relative;
-  overflow: hidden;
   width: rem(32px);
   height: rem(32px);
   border: 0;
-  background: transparent;
-  transition: all 500ms ease-in;
+  position: relative;
 
   &BarTop,
   &BarMiddle,
   &BarBottom {
-    position: absolute;
-    left: 0;
+    @include posLeft(0, 0);
     width: 100%;
     height: 20%;
-    border-radius: 6px;
     background: $white;
+    border-radius: rem(8px);
+    transition: all 0.3s;
   }
-  &BarTop {
-    top: 0%;
-  }
+
   &BarMiddle {
     top: 50%;
     transform: translateY(-50%);
@@ -43,17 +46,13 @@
     top: 100%;
     transform: translateY(-100%);
   }
-  &.is-active {
-    .button--burgerBarTop {
-      top: 50%;
-      transform: translateY(-50%) rotate(45deg);
-    }
-    .button--burgerBarMiddle {
-      transform: translate(-120%, -50%);
-    }
-    .button--burgerBarBottom {
-      top: 50%;
-      transform: translateY(-50%) rotate(-45deg);
-    }
+  .is--active &BarTop {
+    @include transRotate(0%, -50%, $rotate: 45);
+  }
+  .is--active &BarMiddle {
+    @include transRotate(-120%);
+  }
+  .is--active &BarBottom {
+    @include transRotate(0%, -50%, $rotate: -45);
   }
 }
