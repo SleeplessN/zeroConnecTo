@@ -15,6 +15,18 @@
     @include boxSizeMax;
     background: yellow;
   }
+
+  .buttonWrapper {
+    @include mobile {
+      // 위치지정
+      position: absolute;
+      top: rem(50px);
+      right: rem(25px);
+    }
+    @include desktop {
+      display: none;
+    }
+  }
 }
 // 로고
 .logo {

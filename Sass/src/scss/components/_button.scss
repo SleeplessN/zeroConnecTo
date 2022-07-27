@@ -12,3 +12,48 @@
     color: $white;
   }
 }
+
+.button--burger {
+  position: relative;
+  overflow: hidden;
+  width: rem(32px);
+  height: rem(32px);
+  border: 0;
+  background: transparent;
+  transition: all 500ms ease-in;
+
+  &BarTop,
+  &BarMiddle,
+  &BarBottom {
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 20%;
+    border-radius: 6px;
+    background: $white;
+  }
+  &BarTop {
+    top: 0%;
+  }
+  &BarMiddle {
+    top: 50%;
+    transform: translateY(-50%);
+  }
+  &BarBottom {
+    top: 100%;
+    transform: translateY(-100%);
+  }
+  &.is-active {
+    .button--burgerBarTop {
+      top: 50%;
+      transform: translateY(-50%) rotate(45deg);
+    }
+    .button--burgerBarMiddle {
+      transform: translate(-120%, -50%);
+    }
+    .button--burgerBarBottom {
+      top: 50%;
+      transform: translateY(-50%) rotate(-45deg);
+    }
+  }
+}

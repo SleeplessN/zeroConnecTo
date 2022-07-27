@@ -416,6 +416,46 @@ legend {
   color: #fff;
 }
 
+.button--burger {
+  position: relative;
+  overflow: hidden;
+  width: 2rem;
+  height: 2rem;
+  border: 0;
+  background: transparent;
+  transition: all 500ms ease-in;
+}
+.button--burgerBarTop, .button--burgerBarMiddle, .button--burgerBarBottom {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 20%;
+  border-radius: 6px;
+  background: #fff;
+}
+.button--burgerBarTop {
+  top: 0%;
+}
+.button--burgerBarMiddle {
+  top: 50%;
+  transform: translateY(-50%);
+}
+.button--burgerBarBottom {
+  top: 100%;
+  transform: translateY(-100%);
+}
+.button--burger.is-active .button--burgerBarTop {
+  top: 50%;
+  transform: translateY(-50%) rotate(45deg);
+}
+.button--burger.is-active .button--burgerBarMiddle {
+  transform: translate(-120%, -50%);
+}
+.button--burger.is-active .button--burgerBarBottom {
+  top: 50%;
+  transform: translateY(-50%) rotate(-45deg);
+}
+
 .formInput__input {
   -webkit-appearance: none;
   appearance: none;
@@ -449,6 +489,18 @@ legend {
     margin-left: auto;
     margin-right: auto;
     background: yellow;
+  }
+}
+@media (max-width: 767px) {
+  .appHeader .buttonWrapper {
+    position: absolute;
+    top: 3.125rem;
+    right: 1.5625rem;
+  }
+}
+@media (min-width: 768px) {
+  .appHeader .buttonWrapper {
+    display: none;
   }
 }
 
