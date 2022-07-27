@@ -575,81 +575,56 @@ legend {
   border: 0;
 }
 
-.menu {
-  background: pink;
+.menu.is--active {
+  transform: none;
 }
 @media (max-width: 767px) {
   .menu {
-    display: none;
+    position: fixed;
+    top: 0rem;
+    left: 0rem;
+    width: 70%;
+    height: 100vh;
+    background: rgba(171, 211, 117, 0.85);
+    backdrop-filter: blur(4px);
+    transform: translateX(-120%);
   }
 }
 @media (min-width: 768px) {
   .menu {
+    background: #988574;
+  }
+}
+.menu__list {
+  padding: 1rem 1.5rem;
+}
+@media (min-width: 768px) {
+  .menu__list {
     max-width: 64rem;
     margin-left: auto;
     margin-right: auto;
-    padding-top: 2.25rem;
-    padding-bottom: 2.25rem;
-  }
-}
-
-@media (max-width: 767px) {
-  .is--active {
-    display: block;
-    position: fixed;
-    left: 0;
-    top: 0;
-    width: 70%;
-    height: 100vh;
-  }
-}
-
-@media (max-width: 767px) {
-  .menu__list {
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: stretch;
-    flex-wrap: nowrap;
-    gap: 0.875rem;
-    padding-left: 1.5rem;
-    padding-right: 1.5rem;
-    padding-top: 1.5rem;
-    padding-bottom: 1.5rem;
-  }
-}
-@media (min-width: 768px) {
-  .menu__list {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: stretch;
     flex-wrap: nowrap;
-    margin-left: 1.75rem;
-    margin-right: 1.75rem;
   }
 }
-
-@media (max-width: 767px) {
-  .meny__item::after {
-    content: "";
-    display: block;
-    width: 100%;
-    height: 2px;
-  }
+.menu__item {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
 }
-
-@media (max-width: 767px) {
-  .menu__link {
-    padding-left: 0.078125rem;
-    padding-right: 0.078125rem;
-  }
+.menu__link {
+  display: block;
+  font-size: 1.125rem;
+  font-weight: 700;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
 }
 @media (min-width: 768px) {
   .menu__link {
-    color: white;
-    font-weight: 800;
-    text-shadow: 1px 1px 0 black, -1px -1px 0 black;
+    color: #fff;
+    text-shadow: 1px 1px 0 #000, -1px -1px 0 #000;
   }
 }
 
