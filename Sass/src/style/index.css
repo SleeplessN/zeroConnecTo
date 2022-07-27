@@ -689,6 +689,72 @@ legend {
   grid-area: twitter;
 }
 
+.book__cover {
+  text-align: center;
+}
+.book__info {
+  text-align: center;
+}
+.book__figcaption {
+  text-align: center;
+}
+
+@media (min-width: 768px) {
+  .news__date {
+    display: block;
+    text-align: right;
+    margin-top: 0.5rem;
+  }
+}
+.news .iframeWrapper {
+  position: relative;
+  width: 100%;
+  height: 0 !important;
+  padding-top: 56.25%;
+}
+.news .iframeWrapper iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.board {
+  position: relative;
+}
+.board__item {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: stretch;
+  flex-wrap: nowrap;
+}
+.board__link {
+  display: block;
+  width: calc(100% - 6.25em);
+  padding: 0.5rem 0;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+.board__date {
+  width: 6.25em;
+  padding: 0.5rem 0;
+  text-align: right;
+}
+.board__more {
+  position: absolute;
+  top: 0.25rem;
+  right: 0;
+  padding: 0.5rem 0;
+}
+
+.favorite__link {
+  display: block;
+  padding: 0.5rem 0;
+}
+
 .box {
   font-size: 1.5rem;
 }

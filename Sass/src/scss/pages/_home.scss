@@ -44,3 +44,57 @@
     grid-area: twitter;
   }
 }
+.book {
+  &__cover {
+    text-align: center;
+  }
+  &__info {
+    text-align: center;
+  }
+  &__figcaption {
+    text-align: center;
+  }
+}
+.news {
+  &__date {
+    @include desktop {
+      display: block;
+      text-align: right;
+      margin-top: 0.5rem;
+    }
+  }
+  .iframeWrapper {
+    @include responseIframe;
+  }
+}
+.board {
+  position: relative;
+  &__item {
+    @include flexbox($j: space-between);
+  }
+  &__link {
+    display: block;
+    width: calc(100% - 6.25em);
+    padding: 0.5rem 0;
+    @include textEllipis;
+  }
+  &__date {
+    width: 6.25em;
+    padding: 0.5rem 0;
+    text-align: right;
+  }
+  &__more {
+    position: absolute;
+    top: 0.25rem;
+    right: 0;
+    padding: 0.5rem 0;
+  }
+}
+.favorite {
+  &__link {
+    display: block;
+    padding: rem(8px) 0;
+  }
+}
+.twitter {
+}
