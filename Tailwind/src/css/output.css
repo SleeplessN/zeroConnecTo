@@ -583,6 +583,10 @@ video {
   top: 2px;
 }
 
+.right-4 {
+  right: 1rem;
+}
+
 .mt-5 {
   margin-top: 1.25rem;
 }
@@ -698,6 +702,16 @@ video {
 .bg-primary {
   --tw-bg-opacity: 1;
   background-color: rgb(237 35 75 / var(--tw-bg-opacity));
+}
+
+.bg-amber-200 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(253 230 138 / var(--tw-bg-opacity));
+}
+
+.bg-violet-200 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(221 214 254 / var(--tw-bg-opacity));
 }
 
 .bg-checkbox-default {
