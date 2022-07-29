@@ -60,21 +60,23 @@
 
         <!-- 회원 로그인 폼 -->
         <!-- 1. 슬로건과 로그인 폼 사이 여백(margin) -->
-        <form class="">
+        <form class="mt-10">
           <fieldset>
             <!-- 스크린리더를 위한 유틸리티 클래스 적용 -->
-            <legend class="">회원 로그인 폼</legend>
+            <legend class="sr-only">회원 로그인 폼</legend>
 
             <!-- 아이디 입력 서식 -->
+            <!-- 입력서식이 여러 개 일때 전체 입력 서식을 그룹핑 한 후 해당 요소에 space 관련 유틸리트 클래스를 이용하여 간격 조정을 손쉽게 할 수 있다.  -->
+            <!-- focus-within: 사용 가능-->
             <div>
               <!-- 스크린리더를 위한 유틸리티 클래스 적용 -->
-              <label for="userId" class="">아이디</label>
+              <label for="userId" class="sr-only">아이디</label>
               <!-- 1. 테두리 관련 속성 / 2. 안쪽여백 / 3. 아웃라인 제거 -->
               <!-- 4. :focus 스타일 - 선색상 black / 다크모드 선색상 primary / 다크모드 글자색상 black -->
               <input
                 id="userId"
                 name="userId"
-                class=""
+                class="input"
                 type="text"
                 placeholder="아이디"
                 required
@@ -82,7 +84,7 @@
             </div>
 
             <!-- 비밀번호 입력 서식 -->
-            <div class="">
+            <div class="mt-3">
               <label for="userPassword" class="sr-only">비밀번호</label>
               <!-- 반복되는 스타일을 @apply 디렉티브 활용 하여 tailwind.css 파일에 작성할 것 -->
               <!-- 
@@ -96,7 +98,7 @@
               <input
                 id="userPassword"
                 name="userPassword"
-                class=""
+                class="input"
                 type="password"
                 placeholder="비밀번호"
                 required
@@ -105,15 +107,15 @@
 
             <!-- 자동 로그인 및 비밀번호 찾기 그룹 컨테이너 -->
             <!-- 1. 플렉스 배치 / 2. 상하 여백(margin) /  -->
-            <div class="">
+            <div class="flex items-center justify-between mt-4 mb-10">
               <!-- 자동 로그인 및 비밀번호 -->
               <!-- 1. 플렉스 배치 / 2. relative(input 요소의 컨테이닝 블록 역할)  -->
-              <div class="">
+              <div class="relative flex items-center">
                 <!-- tailwind.css 파일에 추가되어 있는 코드는 주석으로 처리한 후 작성해보기 -->
                 <!-- 1. 웹브라우저 스타일 제거(appearance) / 2. absolute(영역을 차지하지 않도록) -->
                 <!-- 3. 가로 세로 크기 / 4. 위치 미세 조정 / 5. 배경이미지 커스텀을 위한 auto-login 클래스-->
                 <input
-                  class=""
+                  class="auto-login absolute w-[16px] h-[16px] top-[2px] appearance-none"
                   type="checkbox"
                   id="autoLogin"
                   name="autoLogin"
@@ -127,7 +129,12 @@
                   }),
                  -->
                 <!-- 3. 배경이미지 반복하지 않기, 배경이미지 왼쪽 중앙 배치 -->
-                <label for="autoLogin" class=""> 자동 로그인 </label>
+                <label
+                  for="autoLogin"
+                  class="pl-6 bg-checkbox-default bg-no-repeat bg-left hover:bg-checkbox-checked"
+                >
+                  자동 로그인
+                </label>
               </div>
 
               <!-- 비밀번호 찾기 링크 -->
@@ -135,16 +142,23 @@
             </div>
 
             <!-- 1. 가로 및 세로 크기 / 2. 테두리 라운딩 / 3. 글자 크기, 색상, 굵기 / 4. 배경 색상 /-->
-            <button type="submit" class="">로그인</button>
+            <button
+              type="submit"
+              class="w-full h-16 text-lg font-bold text-white rounded-md bg-primary"
+            >
+              로그인
+            </button>
           </fieldset>
         </form>
 
         <!-- 회원가입 링크 -->
         <!-- 1. 여백(margin) / 2. 텍스트 가운데 정렬 -->
-        <p class="">
+        <p class="mt-6 text-center">
           아직 계정이 없으신가요?
-          <!-- 1. 글자 굵기, 밑줄 제거, 글자 색상 / 2. 다크모드 글자 색상 -->
-          <a class="" href="#">간편 회원가입</a>
+          <!-- 1. 글자 굵기, 밑줄 추가, 글자 색상 / 2. 다크모드 글자 색상 -->
+          <a class="font-bold text-gray1 dark:text-white underline" href="#"
+            >간편 회원가입</a
+          >
         </p>
       </div>
     </div>

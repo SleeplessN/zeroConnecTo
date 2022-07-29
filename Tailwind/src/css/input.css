@@ -10,3 +10,10 @@ body {
 .auto-login:checked + label {
   @apply pl-6 bg-left bg-no-repeat bg-checkbox-checked;
 }
+
+.input {
+  @apply w-full border rounded-md border-gray5 p-4 outline-none dark:text-black;
+}
+.input:focus {
+  @apply border-black dark:border-primary;
+}
