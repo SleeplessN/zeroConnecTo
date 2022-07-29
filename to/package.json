@@ -1,0 +1,21 @@
+{
+  "scripts": {
+    "start": "run-p tailwind:watch server",
+    "tailwind": "tailwind -i ./src/css/input.css -o ./src/css/output.css",
+    "tailwind:watch": "npm run tailwind -- --watch",
+    "tailwind:build": "npm run tailwind -- --minify",
+    "postcss:build": "postcss ./src/css/input.css -o ./src/css/output.css",
+    "server": "live-server ./src"
+  },
+  "devDependencies": {
+    "autoprefixer": "^10.4.7",
+    "live-server": "^1.2.2",
+    "npm-run-all": "^4.1.5",
+    "postcss": "^8.4.14",
+    "postcss-cli": "^10.0.0",
+    "postcss-import": "^14.1.0",
+    "postcss-nesting": "^10.1.10",
+    "postcss-preset-env": "^7.7.2",
+    "tailwindcss": "^3.1.6"
+  }
+}
