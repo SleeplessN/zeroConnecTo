@@ -1,0 +1,201 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* :focus {
+  @apply focus:outline-none focus:ring-3 focus:ring-Green-700 focus:rounded;
+}
+:focus:not(:focus-visible) {
+  @apply focus:ring-0;
+} */
+
+.home {
+  @apply bg-top bg-no-repeat bg-contain text-White bg-Black font-spoqa-han-sans-neo bg-hero-mobile lg:bg-hero-desktop;
+}
+
+.header {
+  @apply flex items-center px-6 lg:px-5 py-5 lg:py-10 h-20 lg:h-[8.75rem] lg:max-w-[80rem] lg:mx-auto;
+}
+
+.header__title {
+  @apply mr-auto;
+}
+
+.logo {
+  @apply block w-20 py-2 lg:py-3 lg:w-36;
+}
+
+.select-language {
+  @apply relative flex flex-row items-center border rounded-sm border-Gray-200;
+}
+
+.select-language__select {
+  @apply appearance-none relative z-10 bg-transparent text-Gray-200 text-xs lg:text-base px-5.5 lg:px-7.8 py-1 lg:py-2;
+}
+
+.icon-global,
+.icon-triangle {
+  @apply absolute w-[0.625rem] lg:w-[0.9375rem] h-[0.625rem] lg:h-[0.9375rem];
+}
+
+.icon-global {
+  @apply left-[0.4375rem] lg:left-[0.625rem];
+}
+
+.icon-triangle {
+  @apply right-[0.4375rem] lg:right-[0.625rem];
+}
+
+.link-login {
+  @apply ml-3 lg:ml-10;
+}
+
+.button {
+  @apply px-5 py-1.5 lg:py-2 rounded-default text-sm lg:text-base font-bold;
+}
+
+.button-fill {
+  @apply bg-Red-500;
+}
+
+.promotion {
+  @apply text-center px-4.5 lg:px-5 py-5;
+}
+
+.promotion__area {
+  @apply space-y-6 lg:space-y-7 py-12 lg:py-[3.5625rem];
+}
+
+.promotion__description--large {
+  @apply text-6xl font-bold leading-tight lg:text-8xl;
+}
+
+.promotion__description--medium {
+  @apply text-lg lg:text-xl text-Gray-200;
+}
+
+.promotion__description--small {
+  @apply text-sm lg:text-base text-Gray-300;
+}
+
+.membership-form__area {
+  @apply flex flex-col items-center justify-center lg:flex-row;
+}
+
+.form-input {
+  @apply relative w-9/12 lg:w-[35rem];
+}
+
+.form-input__input {
+  @apply w-full h-10 px-5 appearance-none lg:pt-3 text-Gray-500 rounded-4xl lg:rounded-none lg:h-16;
+}
+
+.form-input__label {
+  @apply absolute text-sm transition-all -translate-y-1/2 left-5 top-1/2 lg:text-base text-Gray-500;
+}
+.form-input__input:focus + .form-input__label {
+  @apply text-sm -translate-y-10 text-Red-500 lg:-translate-y-6;
+}
+
+.button-membership {
+  @apply flex items-center h-10 mt-3 text-sm rounded-4xl lg:rounded-none lg:mt-0 lg:h-16;
+}
+
+.icon-arrow {
+  @apply w-4 h-4;
+}
+
+.promotion__description--xsmall {
+  @apply text-sm lg:text-base lg:font-bold text-Gray-400;
+}
+
+.service-guide__list {
+  @apply text-center border-b-4 lg:text-left border-Gray-800;
+}
+
+.service-guide__item {
+  @apply border-t-4 px-4.5 lg:px-5 pt-4 lg:pt-14 pb-5 lg:pb-15 border-Gray-800;
+}
+
+.card {
+  @apply flex flex-col lg:flex-row lg:justify-between lg:items-center py-15 lg:py-0 lg:max-w-[80rem] lg:mx-auto;
+}
+
+.card__description {
+  @apply mb-2.5 lg:mb-0 lg:w-6/12;
+}
+
+.card__description--large {
+  @apply text-3xl lg:text-7xl font-bold mb-7.5 lg:mb-5;
+}
+
+.card__description--small {
+  @apply lg:text-xl text-Gray-600;
+}
+.card__thumbnail {
+  @apply relative overflow-hidden bg-black max-w-[37.5rem] mx-auto;
+}
+
+.card__thumbnail--bg {
+  @apply relative z-10;
+}
+
+.card__thumbnail--media {
+  @apply absolute w-full h-full -translate-x-1/2 -translate-y-1/2;
+}
+
+.media-tv {
+  @apply top-[46%] left-[50%] max-w-[73%] max-h-[54%];
+}
+.media-device {
+  @apply top-[34%] left-[50%] max-w-[63%] max-h-[47%];
+}
+
+.media-save {
+  @apply not-sr-only flex justify-around items-center px-3 py-1.5 w-[73%] absolute bottom-[7%] left-[50%] z-20 -translate-x-1/2 border-2 rounded-2xl border-Gray-700 bg-Black;
+}
+
+.media-save__caption {
+  @apply flex flex-col items-start font-bold mr-auto ml-4.5;
+}
+
+.media-save__caption--medium {
+  @apply text-sm lg:text-lg;
+}
+
+.media-save__caption--small {
+  @apply text-xs text-Blue-500 lg:text-sm;
+}
+
+.footer {
+  @apply px-6 lg:px-5 py-10 lg:py-12 lg:max-w-[80rem] lg:mx-auto;
+}
+
+.footer__description {
+  @apply flex flex-col mb-4 text-xl lg:flex-row text-Gray-200 lg:mb-8;
+}
+
+.footer__list {
+  @apply flex flex-wrap text-Gray-300 text-sm lg:text-base space-y-2.5 lg:space-y-4;
+}
+.footer__item:first-child {
+  @apply mt-2.5 lg:mt-4;
+}
+.footer__item {
+  @apply w-6/12 lg:w-3/12;
+}
+
+.footer .select-language {
+  @apply inline-flex mt-12;
+}
+
+.copyright {
+  @apply block mt-12 text-xl font-bold lg:text-2xl text-Gray-300;
+}
+
+.address {
+  @apply flex flex-col mt-2 text-sm not-italic lg:mt-4 lg:text-base lg:font-bold text-Gray-400;
+}
+
+
+

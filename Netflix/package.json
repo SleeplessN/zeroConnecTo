@@ -1,0 +1,15 @@
+{
+  "scripts": {
+    "start": "run-p watch server",
+    "tailwind": "tailwind -i css/tailwind.css -o css/style.css",
+    "watch": "npm run tailwind -- --watch",
+    "server": "live-server"
+  },
+  "devDependencies": {
+    "autoprefixer": "^10.3.4",
+    "live-server": "^1.2.1",
+    "npm-run-all": "^4.1.5",
+    "postcss": "^8.3.6",
+    "tailwindcss": "^2.2.9"
+  }
+}
